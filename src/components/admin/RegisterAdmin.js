@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import './Register.css';
+import '../frontend/auth/Register.css';
 
-export default class Register extends Component {
+export default class RegisterAdmin extends Component {
     render() {
         return (
             <div className="container">
@@ -36,7 +36,7 @@ export default class Register extends Component {
                         <input type="password" className="form-control" placeholder="Password"/>
                     </div>
 
-                    {/* <div className="field"></div>
+                    <div className="field"></div>
                     <label>Role</label>
                     <div className="radio-inline">
                     <label><input type="radio" name="Role" value="admin"/> Admin</label>
@@ -44,7 +44,7 @@ export default class Register extends Component {
                     <div className="radio-inline">
                     <label><input type="radio" name="Role" value="user"/> User</label>
                     </div>
-         */}
+        
                     <th>
                     </th>
                     <th></th>
