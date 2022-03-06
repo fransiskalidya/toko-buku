@@ -51,7 +51,7 @@ export default class Register extends Component {
                     <div className="container mt-3 center-block">
                     <button type="button" className="btn btn-primary center-block">Register</button><th></th>
                         <p className="forgot-password text-right">
-                        Data sudah pernah terdaftar <a href="#">Login ?</a>
+                        Data sudah pernah terdaftar <a href="/login">Login ?</a>
                     </p><th></th>
                     </div>
                 </form>
