@@ -19,10 +19,10 @@ function App() {
             <Route exact path='/' component={Login} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
-            <Route path="/admin/register" component={RegisterAdmin} />
-            <Route path="/admin/daftarBuku" component={DaftarBuku} />
-            <Route path="/admin/kategori" component={Kategori} />
-            <Route path="/admin/dashboard" component={MasterLayout} />
+            {/* <Route path="/admin/register" component={RegisterAdmin} /> */}
+            {/* <Route path="/admin/daftarBuku" component={DaftarBuku} />
+            <Route path="/admin/kategori" component={Kategori} /> */}
+            <Route path="/admin" name="Admin" render={(props)=> <MasterLayout {...props} />} />
 
           </Switch>   
      </Router>
