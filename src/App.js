@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/frontend/auth/Login";
 import Register from "./components/frontend/auth/Register";
 import RegisterAdmin from "./components/admin/RegisterAdmin";
+import Kategori from "./container/admin/Kategori";
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route path="/admin/register" component={RegisterAdmin} />
+            <Route path="/admin/kategori" component={Kategori} />
           </Switch>
         </div>
       </div>
