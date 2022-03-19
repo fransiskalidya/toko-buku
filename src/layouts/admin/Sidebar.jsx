@@ -8,6 +8,7 @@ const Sidebar = () =>{
         <div className="sb-sidenav-menu">
             <div className="nav">
                 <div className="sb-sidenav-menu-heading">Core</div>
+<<<<<<< HEAD
                 <Link className="nav-link" to="/admin/dashboard">
                     <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
                     Dashboard
@@ -16,10 +17,21 @@ const Sidebar = () =>{
                 <Link className="nav-link collapsed" to="/admin/DaftarBuku" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                     <div className="sb-nav-link-icon"><i className="fas fa-columns"></i></div>
                     Daftar Buku
+=======
+                <Link className="nav-link" to="index.html">
+                    <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
+                    Dashboard
+                </Link>
+                <div className="sb-sidenav-menu-heading">Interface</div>
+                <Link className="nav-link collapsed" to="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                    <div className="sb-nav-link-icon"><i className="fas fa-columns"></i></div>
+                    Layouts
+>>>>>>> f9c1df9ba9defaed563662cec6d6b30a0dbbd48d
                     <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down"></i></div>
                 </Link>
                 <div className="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav className="sb-sidenav-menu-nested nav">
+<<<<<<< HEAD
                         <Link className="nav-link" to="/admin/DaftarBuku">Daftar Buku</Link>
                         <Link className="nav-link" to="/admin/kategori">Kategori Buku</Link>
                     </nav>
@@ -27,6 +39,15 @@ const Sidebar = () =>{
                 <Link className="nav-link collapsed" to="/admin/kategori" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                     <div className="sb-nav-link-icon"><i className="fas fa-book-open"></i></div>
                     Kategori buku
+=======
+                        <Link className="nav-link" to="layout-static.html">Static Navigation</Link>
+                        <Link className="nav-link" to="layout-sidenav-light.html">Light Sidenav</Link>
+                    </nav>
+                </div>
+                <Link className="nav-link collapsed" to="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                    <div className="sb-nav-link-icon"><i className="fas fa-book-open"></i></div>
+                    Pages
+>>>>>>> f9c1df9ba9defaed563662cec6d6b30a0dbbd48d
                     <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down"></i></div>
                 </Link>
                 <div className="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
