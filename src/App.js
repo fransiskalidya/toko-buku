@@ -8,7 +8,7 @@ import Register from "./components/frontend/auth/Register";
 import RegisterAdmin from "./components/admin/RegisterAdmin";
 import DaftarBuku from './container/Buku/DaftarBuku';
 import Kategori from './container/admin/Kategori';
-import MasterLayout from './layouts/admin/MasterLayout';
+// import MasterLayout from './layouts/admin/MasterLayout';
 
 
 function App() {
@@ -22,8 +22,7 @@ function App() {
             <Route path="/admin/register" component={RegisterAdmin} />
             <Route path="/admin/daftarBuku" component={DaftarBuku} />
             <Route path="/admin/kategori" component={Kategori} />
-            <Route path="/admin/dashboard" component={MasterLayout} />
-
+            {/* <Route path="/admin/dashboard" component={MasterLayout} /> */}
           </Switch>   
      </Router>
   );

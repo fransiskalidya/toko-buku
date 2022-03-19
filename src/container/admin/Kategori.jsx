@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './Kategori.css'
 import DataKategori from '../../components/admin/DataKategori';
+import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
 
 class Kategori extends Component {
   state = {
