@@ -5,7 +5,7 @@
 
 .table {
     width: 1100pt;
-    margin: 150px auto;
+    margin: 80px auto;
     margin-top: 20pt;
  }
 
@@ -26,7 +26,7 @@
 
 .buttonInput {
     border-radius: 5pt;
-    margin-left: 885pt;
+    margin-left: 795pt;
     height: 23pt;
     background-color: wheat;
     border: white;
