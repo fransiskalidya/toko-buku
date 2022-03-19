@@ -3,6 +3,7 @@ import React from "react";
 const daftarBuku = (props) => {
     return (
             <tr>
+                <td><img src={props.gambar} alt="GambarBuku" width="150px" height="200px"/></td>
                 <td>{props.nama_buku}</td>
                 <td>{props.kategori_buku}</td>
                 <td>{props.harga}</td>

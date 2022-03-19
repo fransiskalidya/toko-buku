@@ -8,6 +8,7 @@ class DaftarBuku extends Component {
         listBuku: [],
         insertBuku: {
             id: 1,
+            gambar: "",
             nama_buku: "",
             kategori_buku: "",
             harga: "",
@@ -20,7 +21,7 @@ class DaftarBuku extends Component {
     }
 
     ambilDataDariServerAPI = () => {
-        fetch('http://localhost:3001/buku')  // alamat URL API yang ingin kita ambil datanya
+        fetch('http://localhost:3003/buku')  // alamat URL API yang ingin kita ambil datanya
             .then(response => response.json())  // ubah response data dari URL API menjadi sebuah data json
             .then(jsonHasilAmbilDariAPI => {    // data json hasil ambil dari API kita masukkan ke dalam listBuku pada state 
                 this.setState({
@@ -69,13 +70,19 @@ class DaftarBuku extends Component {
     render() {
         return (
 
-            <div className="containerForm" id="tabelData">
-                <div className="col-lg-4" id="tabelData">
-                    <div className="content" id="tabelData">
+            
+            <div className="containerForm">
+                <div className="col-lg-4">
+                <span id="tabelData">
+                    <div className="content">
                         <form>
                             <h3><b>Tambah Data Buku</b></h3><br></br>
                             <div className="bookStore">
                                 <img src="https://png.pngtree.com/template/20190316/ourmid/pngtree-books-logo-image_80041.jpg" alt="bookStore" />
+                            </div>
+                            <div className="field1">
+                                <label htmlFor="gambar" className="col-sm-2 col-form-label">Gambar</label>
+                                <input className="form-control" id="gambar" name="gambar" placeholder="Link Gambar" onChange={this.handleAddBuku} />
                             </div>
                             <div className="field">
                                 <label htmlFor="nama_buku" className="col-sm-2 col-form-label">Judul</label>
@@ -120,7 +127,9 @@ class DaftarBuku extends Component {
                             </div>
                         </form>
                     </div>
+                    </span>
                 </div>
+              
 
                 <br></br>
                 <br></br>
@@ -142,14 +151,14 @@ class DaftarBuku extends Component {
                     <input className="search" type="text" placeholder="Cari..." required></input>
                     <input className="buttonSearch" type="button" value="Cari"></input>
                 </form>
-                <button className="buttonAdd" type="button">Tambahkan Data
-                <a href="#tabelData"></a>
-                </button>
+               <a href="#tabelData"><button className="buttonAdd" type="button">Tambahkan Data
+                </button></a>
                 <div className="table">
                     <table className="table border shadow">
                         <thead className="thead-dark">
                             <tr>
 
+                                <th>GAMBAR BUKU</th>
                                 <th width="200px">JUDUL BUKU</th>
                                 <th width="160px">KATEGORI BUKU</th>
                                 <th width="140px">HARGA</th>
@@ -161,7 +170,7 @@ class DaftarBuku extends Component {
                             </tr>
                             {
                                 this.state.listBuku.map(buku => {    // looping dan masukkan untuk setiap data yang ada di listBuku ke variabel Buku
-                                    return <DataBuku key={buku.id} nama_buku={buku.nama_buku} kategori_buku={buku.kategori_buku} harga={buku.harga} stok={buku.stok} pengarang={buku.pengarang} penerbit={buku.penerbit} deskripsi={buku.deskripsi} idBuku={buku.id} hapusDataBuku={this.handleHapusBuku} />     // mappingkan data json dari API sesuai dengan kategorinya
+                                    return <DataBuku key={buku.id} gambar={buku.gambar} nama_buku={buku.nama_buku} kategori_buku={buku.kategori_buku} harga={buku.harga} stok={buku.stok} pengarang={buku.pengarang} penerbit={buku.penerbit} deskripsi={buku.deskripsi} idBuku={buku.id} hapusDataBuku={this.handleHapusBuku} />     // mappingkan data json dari API sesuai dengan kategorinya
                                 })
                             }
                         </thead>

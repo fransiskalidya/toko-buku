@@ -2,6 +2,7 @@
     "buku": [
         {
             "id": 1,
+            "gambar":"https://cdn.gramedia.com/uploads/items/sagaras.jpeg",
             "nama_buku": "Sagaras",
             "kategori_buku":"Novel",
             "harga": "Rp. 89.000,00",
@@ -12,6 +13,7 @@
         },
         {
             "id": 2,
+            "gambar":"https://cdn.gramedia.com/uploads/items/9786024246945_Laut-Bercerita__w149_hauto.jpg",
             "nama_buku": "Laut Bercerita",
             "kategori_buku":"Novel",
             "harga": "Rp. 100.000,00",
@@ -22,6 +24,7 @@
         },
         {
             "id": 3,
+            "gambar":"https://cdn.gramedia.com/uploads/items/9786020523316_Melangkah_UV_Spot_R4-1__w149_hauto.jpg",
             "nama_buku": "Melangkah",
             "kategori_buku":"Novel",
             "harga": "Rp. 93.000,00",
@@ -32,6 +35,7 @@
         },
         {
             "id": 4,
+            "gambar":"https://cdn.gramedia.com/uploads/items/Seni_Beranjak__w149_hauto.png",
             "nama_buku": "Seni Beranjak",
             "kategori_buku":"Pengembangan Diri",
             "harga": "Rp. 39.500,00",
@@ -42,6 +46,7 @@
         },
         {
             "id": 5,
+            "gambar":"https://cdn.gramedia.com/uploads/items/9786020628837_start-with-wh__w149_hauto.jpg",
             "nama_buku": "Start With Why",
             "kategori_buku":"Pengembangan Diri",
             "harga": "Rp. 75.000,00",
@@ -52,6 +57,7 @@
         },
         {
             "id": 6,
+            "gambar": "https://cdn.gramedia.com/uploads/items/9786020642581_NUNCHI_C_1_4-1__w149_hauto.jpg",
             "nama_buku": "Nunchi: Seni Membaca Pikiran dan Perasaan Orang Lain",
             "kategori_buku":"Pengembangan Diri",
             "harga": "Rp. 80.000,00",
@@ -62,6 +68,7 @@
         },
         {
             "id": 7,
+            "gambar": "https://cdn.gramedia.com/uploads/items/9786022203087_Jajan-Squad__w149_hauto.jpg",
             "nama_buku": "Jajan Squad",
             "kategori_buku":"Komik",
             "harga": "Rp. 77.000,00",
@@ -72,6 +79,7 @@
         },
         {
             "id": 8,
+            "gambar":"https://ebooks.gramedia.com/ebook-covers/32481/general_small_covers/ID_HCO2016MTH04PPSNSN.jpeg",
             "nama_buku": "Platypus Police Squad: Never Say Narwhal",
             "kategori_buku":"Komik",
             "harga": "Rp. 129.000,00",
@@ -82,6 +90,7 @@
         },
         {
             "id": 9,
+            "gambar": "https://cdn.gramedia.com/uploads/items/9789790066359_Journey-Of-Joe__w149_hauto.jpg",
             "nama_buku": "Journey Of Joe",
             "kategori_buku":"Gaya Hidup",
             "harga": "Rp. 110.000,00",
@@ -92,6 +101,7 @@
         },
         {
             "id": 10,
+            "gambar": "https://cdn.gramedia.com/uploads/items/journey__w149_hauto.jpg",
             "nama_buku": "Re-Parenting Journey",
             "kategori_buku":"Gaya Hidup",
             "harga": "Rp. 119.000,00",
