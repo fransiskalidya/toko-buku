@@ -4,39 +4,41 @@ import './Register.css';
 export default class Register extends Component {
     render() {
         return (
-            <div className="container">
-                <div className="col-lg-4"></div>
-                <form>
-                    <h3><b>Register Akun</b></h3>
 
+            <div className="containerRegister">
+                <div className="col-lg-2"></div>
+                <form>
+                    <div className="titleText">
+                        <h3><b>Register Akun</b></h3><br></br>
+                    </div>
                     <div className="ui divider"></div>
                     <div className="ui form"></div>
-                    <div className="field">
-                        <label>Nama</label>
-                        <input type="text" className="form-control" placeholder="Nama"/>
+                    <div className="fieldRegister">
+                        <label>Nama</label><br></br><br></br>
+                        <input type="text" className="form-control" placeholder="Nama" />
                     </div>
 
-                    <div className="field">
-                        <label>Nomor Telepon</label>
-                        <input type="text" className="form-control" placeholder="Nomor Telepon"/>
+                    <div className="fieldRegister">
+                        <label>Nomor Telepon</label><br></br><br></br>
+                        <input type="text" className="form-control" placeholder="Nomor Telepon" />
                     </div>
 
-                    <div className="field">
-                        <label>Email</label>
-                        <input type="email" className="form-control" placeholder="Email"/>
+                    <div className="fieldRegister">
+                        <label>Email</label><br></br><br></br>
+                        <input type="email" className="form-control" placeholder="Email" />
                     </div>
 
-                    <div className="field">
-                        <label>Alamat</label>
-                        <input type="text" className="form-control" placeholder="Alamat"/>
+                    <div className="fieldRegister">
+                        <label>Alamat</label><br></br><br></br>
+                        <input type="text" className="form-control" placeholder="Alamat" />
                     </div>
 
-                    <div className="field">
-                        <label>Password</label>
-                        <input type="password" className="form-control" placeholder="Password"/>
+                    <div className="fieldRegister">
+                        <label>Password</label><br></br><br></br>
+                        <input type="password" className="form-control" placeholder="Password" />
                     </div>
 
-                    {/* <div className="field"></div>
+                    {/* <div className="fieldRegister"></div>
                     <label>Role</label>
                     <div className="radio-inline">
                     <label><input type="radio" name="Role" value="admin"/> Admin</label>
@@ -45,17 +47,21 @@ export default class Register extends Component {
                     <label><input type="radio" name="Role" value="user"/> User</label>
                     </div>
          */}
-                    <th>
-                    </th>
-                    <th></th>
+                    <br></br>
+
+
                     <div className="container mt-3 center-block">
-                    <button type="button" className="btn btn-primary center-block">Register</button><th></th>
+                        <div className="btn">
+                            <button type="button" className="btn btn-primary center-block">Register</button></div>
+                        <br></br>
                         <p className="forgot-password text-right">
-                        Data sudah pernah terdaftar <a href="/login">Login ?</a>
-                    </p><th></th>
+                            Data sudah pernah terdaftar <a href="/login">Login ?</a>
+                        </p>
                     </div>
                 </form>
             </div>
+
+
         );
     }
 }
