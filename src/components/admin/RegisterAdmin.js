@@ -7,7 +7,7 @@ export default class RegisterAdmin extends Component {
             <div className="container">
                 <div className="col-lg-4"></div>
                 <form>
-                    <h3><b>Register Akun</b></h3>
+                    <h3><b>Register Akun Admin</b></h3>
 
                     <div className="ui divider"></div>
                     <div className="ui form"></div>
@@ -36,7 +36,7 @@ export default class RegisterAdmin extends Component {
                         <input type="password" className="form-control" placeholder="Password"/>
                     </div>
 
-                    <div className="field"></div>
+                    {/* <div className="field"></div>
                     <label>Role</label>
                     <div className="radio-inline">
                     <label><input type="radio" name="Role" value="admin"/> Admin</label>
@@ -44,7 +44,7 @@ export default class RegisterAdmin extends Component {
                     <div className="radio-inline">
                     <label><input type="radio" name="Role" value="user"/> User</label>
                     </div>
-        
+         */}
                     <th>
                     </th>
                     <th></th>

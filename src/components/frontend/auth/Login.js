@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import './Login.css';
-
+// import {Link} from 'react-router-dom';
+import Navbar from "./Navbar";
 export default class Login extends Component {
     render() {
         return (
-
+            <div>
+            <Navbar />
             <div className="containerLogin">
                 <div className="col-lg-2"></div>
                 <form>
@@ -35,7 +37,7 @@ export default class Login extends Component {
                     </div>
                 </form>
             </div>
-
+            </div>
 
         );
     }

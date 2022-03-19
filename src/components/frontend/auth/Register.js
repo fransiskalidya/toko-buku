@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import './Register.css';
+import Navbar from "./Navbar";
 
 export default class Register extends Component {
     render() {
         return (
-
+            <div>
+            <Navbar />
             <div className="containerRegister">
                 <div className="col-lg-2"></div>
                 <form>
@@ -61,7 +63,7 @@ export default class Register extends Component {
                 </form>
             </div>
 
-
+            </div>
         );
     }
 }

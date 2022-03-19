@@ -1,0 +1,35 @@
+.row {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+
+.table {
+    width: 800pt;
+    margin: 150px auto;
+    margin-top: 20pt;
+ }
+
+ .py-4 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+    text-shadow: #f64f59;
+    text-decoration: wavy;
+    font-style: unset;
+   
+}
+
+.containerTable{
+    margin-top: auto;
+}
+
+.buttonInput {
+    border-radius: 5pt;
+    margin-left: 885pt;
+    height: 23pt;
+    background-color: wheat;
+    border: white;
+    border-style: double;
+    font-family: 'Times New Roman', Times, serif;
+}
