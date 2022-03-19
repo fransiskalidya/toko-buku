@@ -37,6 +37,11 @@
   }
 }
 
-.outer{
+/* .outer{
   margin-top: 3cm;
+} */
+
+.nav-item {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
 }
