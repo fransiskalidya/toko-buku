@@ -6,11 +6,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/frontend/auth/Login";
 import Register from "./components/frontend/auth/Register";
 import RegisterAdmin from "./components/admin/RegisterAdmin";
-<<<<<<< HEAD
-import Kategori from "./container/admin/Kategori";
-=======
 import DaftarBuku from './container/Buku/DaftarBuku';
->>>>>>> 9ea9fb96af4544396275b5cbd3f2dfd5b48c3822
+import Kategori from "./container/admin/Kategori";
+
 
 
 function App() {
@@ -39,17 +37,10 @@ function App() {
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route path="/admin/register" component={RegisterAdmin} />
-<<<<<<< HEAD
-            <Route path="/admin/kategori" component={Kategori} />
-          </Switch>
-        </div>
-      </div>
-    </div></Router>
-=======
             <Route path="/admin/daftarBuku" component={DaftarBuku} />
+            <Route path="/admin/kategori" component={Kategori} />
           </Switch>   
      </Router>
->>>>>>> 9ea9fb96af4544396275b5cbd3f2dfd5b48c3822
   );
 }
 

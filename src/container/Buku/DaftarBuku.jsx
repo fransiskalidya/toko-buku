@@ -20,7 +20,7 @@ class DaftarBuku extends Component {
     }
 
     ambilDataDariServerAPI = () => {
-        fetch('http://localhost:3003/buku')  // alamat URL API yang ingin kita ambil datanya
+        fetch('http://localhost:3001/buku')  // alamat URL API yang ingin kita ambil datanya
             .then(response => response.json())  // ubah response data dari URL API menjadi sebuah data json
             .then(jsonHasilAmbilDariAPI => {    // data json hasil ambil dari API kita masukkan ke dalam listBuku pada state 
                 this.setState({
