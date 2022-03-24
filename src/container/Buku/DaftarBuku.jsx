@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './DaftarBuku.css';
+// import './DaftarBuku.css';
 import DataBuku from '../../components/Buku/DataBuku';
 import Navbar from "./Navbar";
 import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
