@@ -3,7 +3,7 @@ import React from "react";
 const daftarUser = (props) => {
     return (
             <tr>
-                <td><img src={props.gambar} alt="GambarUser"/></td>
+                <td><img class="rounded-image" src={props.gambar} alt="GambarUser"/></td>
                 <td>{props.nama}</td>
                 <td>{props.nomor_telp}</td>
                 <td>{props.email}</td>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import './DataUser.css'
+import './DataUser.css'
 import User from '../../components/admin/User';
 import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
 
@@ -8,11 +8,12 @@ class DataUser extends Component {
         listUser: [],
         insertUser: {
             id: 1,
-            nama: "Alyssa Wulandari",
-            nomor_telp: "085716509814",
-            email: "alyssa01@gmail.com",
-            password: "alyssaaw01",
-            alamat: "Jl. Pahlawan No.08, Madiun"
+            gambar: "",
+            nama: "",
+            nomor_telp: "",
+            email: "",
+            password: "",
+            alamat: ""
         }
     }
 
