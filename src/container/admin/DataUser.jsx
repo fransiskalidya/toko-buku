@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import './DataUser.css'
 import User from '../../components/admin/User';
+import {Link} from 'react-router-dom';
 import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
+
 
 class DataUser extends Component {
     state = {

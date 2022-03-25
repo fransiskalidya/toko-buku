@@ -1,31 +1,22 @@
 {
-    "user": [
-        {
-            "id": 1,
-            "gambar": "https://i.insider.com/5cb8b133b8342c1b45130629?width=700",
-            "nama": "Alyssa Wulandari",
-            "nomor_tlp": "085716509812",
-            "email": "alyssa01@gmail.com",
-            "password": "alyssaaw01",
-            "alamat": "Jl. Pahlawan No.08, Madiun"
-        },
-        {
-            "id": 2,
-            "gambar": "https://imageio.forbes.com/specials-images/imageserve/5f64397931669e167fc57eaf/960x0.jpg?fit=bounds&format=jpg&width=960",
-            "nama": "Reyandi Azari",
-            "nomor_tlp": "081234567890",
-            "email": "reyndiA06@gmail.com",
-            "password": "reyndiiAzr06",
-            "alamat": "Jl. Soekarno No.9, Malang"
-        },
-        {
-            "id": 3,
-            "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8STvJzWajeNMT1wHuzVzy8iLetYUD9_5Ngg&usqp=CAU",
-            "nama": "Ajeng Bianda",
-            "nomor_tlp": "082345780971",
-            "email": "biaaje98@gmail.com",
-            "password": "bndaje98",
-            "alamat": "Jl. Mastrip No.28, Madiun"
-        }
-    ]
+  "user": [
+    {
+      "id": 2,
+      "gambar": "https://imageio.forbes.com/specials-images/imageserve/5f64397931669e167fc57eaf/960x0.jpg?fit=bounds&format=jpg&width=960",
+      "nama": "Reyandi Azari",
+      "nomor_tlp": "081234567890",
+      "email": "reyndiA06@gmail.com",
+      "password": "reyndiiAzr06",
+      "alamat": "Jl. Soekarno No.9, Malang"
+    },
+    {
+      "id": 3,
+      "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8STvJzWajeNMT1wHuzVzy8iLetYUD9_5Ngg&usqp=CAU",
+      "nama": "Ajeng Bianda",
+      "nomor_tlp": "082345780971",
+      "email": "biaaje98@gmail.com",
+      "password": "bndaje98",
+      "alamat": "Jl. Mastrip No.28, Madiun"
+    }
+  ]
 }
