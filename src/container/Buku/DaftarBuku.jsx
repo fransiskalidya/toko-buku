@@ -81,11 +81,16 @@ class DaftarBuku extends Component {
                         <div className="col-lg-5">
                             <div className="card shadow-lg border-0 rounded-lg mt-5">
                                 <div className="card-header"><h3 className="text-center font-weight-light my-4">Input data Kategori</h3></div>
-                                <img src="https://png.pngtree.com/template/20190316/ourmid/pngtree-books-logo-image_80041.jpg" alt="bookStore" />
+                                <img src="https://img.jakpost.net/c/2020/04/21/2020_04_21_93387_1587459137._large.jpg" alt="bookStore" />
                                 <div className="card-body">
                                     {/* form pengisian */}
 
                                     <form>
+                                        <b><label htmlFor="gambar" form="gambar">Gambar Buku</label></b><br></br><br></br>
+                                        <div className="col-md-12 mb-3">
+                                            <input type="file" className="form-control" id="gambar" name="gambar" placeholder="Link Gambar" onChange={this.handleAddBuku} />
+                                        </div>
+                                        <br></br>
                                         <div className="form-floating mb-3">
                                             <input placeholder="Link Gambar" onChange={this.handleAddBuku} className="form-control" id="gambar" name="id" />
                                             <label htmlFor="gambar">ID</label>
@@ -125,12 +130,6 @@ class DaftarBuku extends Component {
                                 </div>
 
 
-
-
-                                <div className="form-floating mb-3">
-                                    <label htmlFor="penerbit" className="col-sm-4 col-form-label">Penerbit</label>
-                                    <input type="text" className="form-control" id="penerbit" name="penerbit" placeholder="Penerbit" onChange={this.handleAddBuku} />
-                                </div>
 
                             </div>
                         </div>

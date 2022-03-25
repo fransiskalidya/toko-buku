@@ -78,30 +78,32 @@ class DataUser extends Component {
                                 <img src="https://miro.medium.com/max/1400/1*zEiP4QVsrm4UdaEEiNmpWg.jpeg" class="card-img-top" alt="bookStore"></img>
                                 <div className="card-body">
 
+
                                     <form>
-                                        <div className="form-floating mb-4">
-                                            <label htmlFor="gambar" className="col-sm-4 col-form-label">Gambar</label>
-                                            <input className="form-control" id="gambar" name="gambar" placeholder="Link Gambar" onChange={this.handleAddBuku} />
+                                        <b><label htmlFor="gambar" form="gambar">Gambar Buku</label></b><br></br><br></br>
+                                        <div className="col-md-12 mb-3">
+                                            <input type="file" className="form-control" id="gambar" name="gambar" placeholder="Link Gambar" onChange={this.handleAddBuku} />
                                         </div>
+                                        <br></br>
                                         <div className="form-floating mb-3">
-                                            <label htmlFor="nama" className="col-sm-4 col-form-label">Nama</label>
                                             <input className="form-control" id="id" name="id" placeholder="Nama User" />
+                                            <label htmlFor="nama" form="nama">Nama</label>
                                         </div>
                                         <div className="form-floating mb-3">
-                                            <label htmlFor="nomor_telp" className="col-sm-4 col-form-label">Nomor Telepon</label>
                                             <input type="text" className="form-control" id="nomor_telp" name="nomor_telp" placeholder="Nomor Telepon" />
+                                            <label htmlFor="nomor_telp" form="nomor_telp">Nomor Telepon</label>
                                         </div>
                                         <div className="form-floating mb-3">
-                                            <label htmlFor="email" className="col-sm-4 col-form-label">E-mail</label>
                                             <input type="text" className="form-control" id="email" name="email" placeholder="E-mail" />
+                                            <label htmlFor="email" form="email">E-mail</label>
                                         </div>
                                         <div className="form-floating mb-3">
-                                            <label htmlFor="password" className="col-sm-4 col-form-label">Password</label>
                                             <input type="text" className="form-control" id="password" name="password" placeholder="password" />
+                                            <label htmlFor="password" form="password">Password</label>
                                         </div>
                                         <div className="form-floating mb-3">
-                                            <label htmlFor="alamat" className="col-sm-4 col-form-label">Alamat</label>
                                             <input type="textarea" className="form-control" id="alamat" name="alamat" placeholder="alamat" />
+                                            <label htmlFor="alamat" form="alamat">Alamat</label>
                                         </div>
                                         <div className="d-flex align-items-center justify-content-between mt-4 mb-0">
                                             <button type="submit" className="btn btn-success center-block" onClick={this.handleSaveButton}>Submit</button>
