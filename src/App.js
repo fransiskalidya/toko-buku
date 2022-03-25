@@ -9,6 +9,7 @@ import RegisterAdmin from "./components/admin/RegisterAdmin";
 import DaftarBuku from './container/Buku/DaftarBuku';
 import Kategori from './container/admin/Kategori';
 import MasterLayout from './layouts/admin/MasterLayout';
+import Dashboard from "./components/admin/Dashboard";
 
 
 function App() {

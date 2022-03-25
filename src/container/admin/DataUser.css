@@ -1,0 +1,7 @@
+.rounded-image {
+    border-radius: 2500px;
+    -webkit-border-radius:2500px;
+    -moz-border-radius:2500px;
+    width: 80px;
+    height:80px;
+}
