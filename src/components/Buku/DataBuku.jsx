@@ -12,7 +12,7 @@ const daftarBuku = (props) => {
                 <td>{props.penerbit}</td>
                 <td>{props.deskripsi}</td>
                 <td>
-                <button className="btn btn-sm btn-warning" onClick={() => props.hapusDataBuku(props.idBuku)}>Hapus</button><br></br><br></br>                
+                <button className="btn btn-sm btn-danger" onClick={() => props.hapusDataBuku(props.idBuku)}>Hapus</button><br></br><br></br>                
                 <button className="btn btn-sm btn-warning" onClick={() => props.hapusDataBuku(props.idBuku)}>Edit</button>
                 </td>
                 </tr>

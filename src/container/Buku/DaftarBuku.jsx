@@ -71,116 +71,115 @@ class DaftarBuku extends Component {
     render() {
         return (
 
-            <div>
+            <div className="card mb-4">
                 <Navbar />
-                <div className="containerForm">
-                    <div className="col-lg-4">
-                        <span id="tabelData">
-                            <div className="content">
-                                <form>
-                                    <h3><b>Tambah Data Buku</b></h3><br></br>
-                                    <div className="bookStore">
-                                        <img src="https://png.pngtree.com/template/20190316/ourmid/pngtree-books-logo-image_80041.jpg" alt="bookStore" />
-                                    </div>
-                                    <div className="field1">
-                                        <label htmlFor="gambar" className="col-sm-2 col-form-label">Gambar</label>
-                                        <input className="form-control" id="gambar" name="gambar" placeholder="Link Gambar" onChange={this.handleAddBuku} />
-                                    </div>
-                                    <div className="field">
-                                        <label htmlFor="nama_buku" className="col-sm-2 col-form-label">Judul</label>
-                                        <input type="text" className="form-control" id="nama_buku" name="nama_buku" placeholder="Judul Buku" onChange={this.handleAddBuku} />
-                                    </div>
+                {/* <div className="containerForm"> */}
 
-                                    <div className="field">
-                                        <label htmlFor="kategori_buku" className="col-sm-2 col-form-label">Kategori</label>
-                                        <input type="text" className="form-control" id="kategori_buku" name="kategori_buku" placeholder="Kategori Buku" onChange={this.handleAddBuku} />
-                                    </div>
+                {/* add buku */}
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-5">
+                            <div className="card shadow-lg border-0 rounded-lg mt-5">
+                                <div className="card-header"><h3 className="text-center font-weight-light my-4">Input data Kategori</h3></div>
+                                <img src="https://png.pngtree.com/template/20190316/ourmid/pngtree-books-logo-image_80041.jpg" alt="bookStore" />
+                                <div className="card-body">
+                                    {/* form pengisian */}
 
-                                    <div className="field">
-                                        <label htmlFor="harga" className="col-sm-2 col-form-label">Harga</label>
-                                        <input type="text" className="form-control" id="harga" name="harga" placeholder="Harga Buku" onChange={this.handleAddBuku} />
-                                    </div>
-
-                                    <div className="field">
-                                        <label htmlFor="stok" className="col-sm-2 col-form-label">Stok</label>
-                                        <input type="text" className="form-control" id="stok" name="stok" placeholder="Stok Buku" onChange={this.handleAddBuku} />
-                                    </div>
-
-                                    <div className="field">
-                                        <label htmlFor="pengarang" className="col-sm-2 col-form-label">Pengarang</label>
-                                        <input type="text" className="form-control" id="pengarang" name="pengarang" placeholder="Pengarang" onChange={this.handleAddBuku} />
-                                    </div>
-
-                                    <div className="field">
-                                        <label htmlFor="penerbit" className="col-sm-2 col-form-label">Penerbit</label>
-                                        <input type="text" className="form-control" id="penerbit" name="penerbit" placeholder="Penerbit" onChange={this.handleAddBuku} />
-                                    </div>
-
-                                    <div className="field1">
-                                        <label htmlFor="deskripsi" className="col-sm-2 col-form-label">Deskripsi</label>
-                                        <textarea className="form-control" id="deskripsi" name="deskripsi" placeholder="Deskripsi Buku" onChange={this.handleAddBuku} />
-                                    </div>
-                                    <br>
-                                    </br>
+                                    <form>
+                                        <div className="form-floating mb-3">
+                                            <input placeholder="Link Gambar" onChange={this.handleAddBuku} className="form-control" id="gambar" name="id" />
+                                            <label htmlFor="gambar">ID</label>
+                                        </div>
+                                        <div className="form-floating mb-3">
+                                            <input className="form-control" id="kategori_buku" name="nama_kategori" type="text" placeholder="Kategori Buku" onChange={this.handleAddBuku} />
+                                            <label htmlFor="nama_buku" >Kategori</label>
+                                        </div>
+                                        <div className="form-floating mb-3">
+                                            <input className="form-control" type="text" id="harga" name="harga" placeholder="Harga Buku" onChange={this.handleAddBuku} />
+                                            <label htmlFor="harga" >Harga</label>
+                                        </div>
+                                        <div className="form-floating mb-3">
+                                            <input className="form-control" type="text" id="stok" name="stok" placeholder="Stok Buku" onChange={this.handleAddBuku} />
+                                            <label htmlFor="stok" >Stok</label>
+                                        </div>
+                                        <div className="form-floating mb-3">
+                                            <input className="form-control" type="text" id="pengarang" name="pengarang" placeholder="Pengarang" onChange={this.handleAddBuku} />
+                                            <label htmlFor="pengarang" >Pengarang</label>
+                                        </div>
+                                        <div className="form-floating mb-3">
+                                            <input className="form-control" type="text" id="penerbit" name="penerbit" placeholder="Penerbit" onChange={this.handleAddBuku} />
+                                            <label htmlFor="penerbit" >Penerbit</label>
+                                        </div>
+                                        <div className="form-floating mb-3">
+                                            <textarea className="form-control" type="text" id="deskripsi" name="deskripsi" placeholder="Deskripsi Buku" onChange={this.handleAddBuku} />
+                                            <label htmlFor="deskripsi">Deskripsi</label>
+                                        </div>
 
 
-                                    <div className="container mt-3 center-block">
-                                        <button type="submit" className="btn btn-primary center-block" onClick={this.handleSaveButton}>Submit</button>
-                                    </div>
-                                </form>
+                                        <div className="d-flex align-items-center justify-content-between mt-4 mb-0">
+                                            <button type="submit" className="btn btn-primary center-block" onClick={this.handleSaveButton}>Submit</button>
+                                        </div>
+                                    </form>
+
+
+                                </div>
+
+
+
+
+
                             </div>
-                        </span>
-                    </div>
-
-
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-
-
-
-                    <div className="containerTable">
-                        <div className="py-4">
-                            <h1>DAFTAR BUKU "BOOKTOWN"</h1>
                         </div>
                     </div>
-                    <br></br>
-                    <br></br>
-
-                    <form>
-                        <input className="search" type="text" placeholder="Cari..." required></input>
-                        <input className="buttonSearch" type="button" value="Cari"></input>
-                    </form>
-                    <a href="#tabelData"><button className="buttonAdd" type="button">Tambahkan Data
-                    </button></a>
-                    <div className="buku">
-                        <table className="table border shadow">
-                            <thead className="thead-dark">
-                                <tr>
-
-                                    <th>GAMBAR BUKU</th>
-                                    <th width="200px">JUDUL BUKU</th>
-                                    <th width="160px">KATEGORI BUKU</th>
-                                    <th width="140px">HARGA</th>
-                                    <th>STOK</th>
-                                    <th>PENGARANG</th>
-                                    <th>PENERBIT</th>
-                                    <th>DESKRIPSI</th>
-                                    <th width="120px">Action</th>
-                                </tr>
-                                {
-                                    this.state.listBuku.map(buku => {    // looping dan masukkan untuk setiap data yang ada di listBuku ke variabel Buku
-                                        return <DataBuku key={buku.id} gambar={buku.gambar} nama_buku={buku.nama_buku} kategori_buku={buku.kategori_buku} harga={buku.harga} stok={buku.stok} pengarang={buku.pengarang} penerbit={buku.penerbit} deskripsi={buku.deskripsi} idBuku={buku.id} hapusDataBuku={this.handleHapusBuku} />     // mappingkan data json dari API sesuai dengan kategorinya
-                                    })
-                                }
-                            </thead>
-                        </table>
                     </div>
-                </div>
-            </div>
 
+                    <br></br>
+                    <br></br>
+
+
+                    {/* data buku */}
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-table me-1"></i>
+                            Daftar Buku BookTown
+                        </div>
+                        <br></br>
+
+                        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Cari" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                                <button class="btn btn-primary" id="btnNavbarSearch" type="button">Cari</button>
+                            </div>
+                        </form>
+
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>GAMBAR BUKU</th>
+                                        <th>JUDUL BUKU</th>
+                                        <th>KATEGORI BUKU</th>
+                                        <th>HARGA</th>
+                                        <th>STOK</th>
+                                        <th>PENGARANG</th>
+                                        <th>PENERBIT</th>
+                                        <th>DESKRIPSI</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    {
+                                        this.state.listBuku.map(buku => {    // looping dan masukkan untuk setiap data yang ada di listBuku ke variabel Buku
+                                            return <DataBuku key={buku.id} gambar={buku.gambar} nama_buku={buku.nama_buku} kategori_buku={buku.kategori_buku} harga={buku.harga} stok={buku.stok} pengarang={buku.pengarang} penerbit={buku.penerbit} deskripsi={buku.deskripsi} idBuku={buku.id} hapusDataBuku={this.handleHapusBuku} />     // mappingkan data json dari API sesuai dengan kategorinya
+                                        })
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                
+            </div>
 
         );
     };

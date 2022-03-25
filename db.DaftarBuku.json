@@ -1,114 +1,92 @@
 {
-    "buku": [
-        {
-            "id": 1,
-            "gambar":"https://cdn.gramedia.com/uploads/items/sagaras.jpeg",
-            "nama_buku": "Sagaras",
-            "kategori_buku":"Novel",
-            "harga": "Rp. 89.000,00",
-            "stok": 20,
-            "pengarang": "Tere Liye",
-            "penerbit": "Penerbit Sabak Grip",
-            "deskripsi": "Akhirnya. Siapa orang tua Ali dijawab di buku ini. Ali, bertahun-tahun, berusaha memecahkan misteri itu. Paib dan Seli tentu tidak akan membiarkan Ali sendirian, mereka sahabat sejati. Dan jangan lupakan, Batozar alias Master B, dengan segenap kalimat kasar, seolah tidak peduli, dia selalu siap membela. Tapi bagaimana jika misteri itu terhadang tembok kokoh SagaraSe? Dan mereka harus bertarung hidup-mati lima ronde melawan Ksatria SagaraS? Jangan khawatir, kalian akan tersenyum lebar (dan boleh jadi sambil menangis), saat tiba di halaman terakhir buku ini. Buku ini adalah buku ke-13 dari serial BUMI."
-        },
-        {
-            "id": 2,
-            "gambar":"https://cdn.gramedia.com/uploads/items/9786024246945_Laut-Bercerita__w149_hauto.jpg",
-            "nama_buku": "Laut Bercerita",
-            "kategori_buku":"Novel",
-            "harga": "Rp. 100.000,00",
-            "stok": 10,
-            "pengarang": "Leila S. Chudori",
-            "penerbit": "Kepustakaan Populer Gramedia",
-            "deskripsi": "Laut Bercerita, novel terbaru Leila S. Chudori, bertutur tentang kisah keluarga yang kehilangan, sekumpulan sahabat yang merasakan kekosongan di dada, sekelompok orang yang gemar menyiksa dan lancar berkhianat, sejumlah keluarga yang mencari kejelasan makam anaknya, dan tentang cinta yang  tak akan luntur."
-        },
-        {
-            "id": 3,
-            "gambar":"https://cdn.gramedia.com/uploads/items/9786020523316_Melangkah_UV_Spot_R4-1__w149_hauto.jpg",
-            "nama_buku": "Melangkah",
-            "kategori_buku":"Novel",
-            "harga": "Rp. 93.000,00",
-            "stok": 10,
-            "pengarang": "Js. Khairen",
-            "penerbit": "Gramedia Widiasarana Indonesia",
-            "deskripsi": "Listrik padam di seluruh Jawa dan Bali secara misterius! Ancaman nyata kekuatan baru yang hendak menaklukkan Nusantara. Saat yang sama, empat sahabat mendarat di Sumba, hanya untuk mendapati nasib ratusan juta manusia ada di tangan mereka! Empat mahasiswa ekonomi ini, harus bertarung melawan pasukan berkuda yang bisa melontarkan listrik! Semua dipersulit oleh seorang buronan tingkat tinggi bertopeng pahlawan yang punya rencana mengerikan."
-        },
-        {
-            "id": 4,
-            "gambar":"https://cdn.gramedia.com/uploads/items/Seni_Beranjak__w149_hauto.png",
-            "nama_buku": "Seni Beranjak",
-            "kategori_buku":"Pengembangan Diri",
-            "harga": "Rp. 39.500,00",
-            "stok": 15,
-            "pengarang": "Muthia Sayekti",
-            "penerbit": "Psikologi Corner",
-            "deskripsi": "Move on” sering dianggap sebagai orang-orang yang sudah berhasil melalukan proses “perpindahan hati” dari satu orang ke orang yang lain. Contohnya: si A yang sempat berpacaran dengan si B, harus putus, dan selang beberapa waktu berhasil memiliki pasangan baru. Proses itulah yang orang-orang amini sebagai makna dari frasa move on. Tapi benarkah move on hanya berkutat pada permasalahan relasi antara seseorang dengan mantan kekasihnya di masa lalu?"
-        },
-        {
-            "id": 5,
-            "gambar":"https://cdn.gramedia.com/uploads/items/9786020628837_start-with-wh__w149_hauto.jpg",
-            "nama_buku": "Start With Why",
-            "kategori_buku":"Pengembangan Diri",
-            "harga": "Rp. 75.000,00",
-            "stok": 25,
-            "pengarang": "Simon Sinek",
-            "penerbit": "Gramedia Pustaka Utama",
-            "deskripsi": "Start with Why menggunakan contoh dunia nyata untuk menguraikan konsep Lingkaran Emas yang merangkum pentingnya mengidentifikasi tujuan untuk keberadaan organisasi sebelum hal lainnya, kemudian mengambil tindakan untuk membuat visi menjadi kenyataan. Asal mula perusahaan harus menjadi alasannya. Begitu juga dengan kehidupan pribadi kita juga. Setiap orang atau organisasi dapat menjelaskan apa yang mereka lakukan; beberapa dapat menjelaskan bagaimana mereka berbeda atau lebih baik; tetapi sangat sedikit yang bisa mengartikulasikan mengapa."
-        },
-        {
-            "id": 6,
-            "gambar": "https://cdn.gramedia.com/uploads/items/9786020642581_NUNCHI_C_1_4-1__w149_hauto.jpg",
-            "nama_buku": "Nunchi: Seni Membaca Pikiran dan Perasaan Orang Lain",
-            "kategori_buku":"Pengembangan Diri",
-            "harga": "Rp. 80.000,00",
-            "stok": 50,
-            "pengarang": "Euny Hong",
-            "penerbit": "Gramedia Pustaka Utama",
-            "deskripsi": "Nunchi, indra keenam orang Korea untuk membaca keadaan dan memahami apa yang dipikirkan dan dirasakan orang lain, telah dipraktikkan selama lebih dari 5.000 tahun dan diyakini telah melambungkan Korea dari salah satu negara termiskin menjadi salah satu negara paling maju di dunia. Para orangtua di Korea percaya bahwa mengajarkan nunchi pada anak mereka sama pentingnya dengan mengajari anak mereka menyeberang jalan dengan selamat. Nunchi adalah suatu bentuk kecerdasan emosional yang dapat dipelajari siapa pun. Yang kita butuhkan hanyalah mata dan telinga untuk memperhatikan orang lain, bukan menonjolkan diri sendiri. Buku ini akan menunjukkan caranya."
-        },
-        {
-            "id": 7,
-            "gambar": "https://cdn.gramedia.com/uploads/items/9786022203087_Jajan-Squad__w149_hauto.jpg",
-            "nama_buku": "Jajan Squad",
-            "kategori_buku":"Komik",
-            "harga": "Rp. 77.000,00",
-            "stok": 20,
-            "pengarang": "Dito Satrio",
-            "penerbit": "Bukune",
-            "deskripsi": "Jajan Squad"
-        },
-        {
-            "id": 8,
-            "gambar":"https://ebooks.gramedia.com/ebook-covers/32481/general_small_covers/ID_HCO2016MTH04PPSNSN.jpeg",
-            "nama_buku": "Platypus Police Squad: Never Say Narwhal",
-            "kategori_buku":"Komik",
-            "harga": "Rp. 129.000,00",
-            "stok": 18,
-            "pengarang": "Jarrett J. Krosoczka",
-            "penerbit": "Harper Collins",
-            "deskripsi": "From Jarrett J. Krosoczka comes , the final installment in the hilarious, high-action illustrated middle grade series featuring two platypus detectives, perfect for fans of Diary of a Wimpy Kid, Big Nate, and Jarrett's own Lunch Lady series."
-        },
-        {
-            "id": 9,
-            "gambar": "https://cdn.gramedia.com/uploads/items/9789790066359_Journey-Of-Joe__w149_hauto.jpg",
-            "nama_buku": "Journey Of Joe",
-            "kategori_buku":"Gaya Hidup",
-            "harga": "Rp. 110.000,00",
-            "stok": 12,
-            "pengarang": "Regi Suryo",
-            "penerbit": "AgroMedia Pustaka",
-            "deskripsi": "Melihat perkembangan industri kopi yang kian menjamur dan konsumen yang kian lebih dalam mengulik sisi lain dari kopi membuat literasi mengenai berbagai hal tentang kopi menjadi suatu hal yang perlu dihadirkan. Buku ini menjadi salah satu media bagi orang-orang yang ingin mengetahui segala pengetahuan tentang kopi."
-        },
-        {
-            "id": 10,
-            "gambar": "https://cdn.gramedia.com/uploads/items/journey__w149_hauto.jpg",
-            "nama_buku": "Re-Parenting Journey",
-            "kategori_buku":"Gaya Hidup",
-            "harga": "Rp. 119.000,00",
-            "stok": 22,
-            "pengarang": "LUSY SUTEDJO, Aleima Sharuna",
-            "penerbit": "Kawah Media Pustaka Pt",
-            "deskripsi": "Seiring bertambahnya usia, kadang kita melupakan satu bagian penting dalam diri kita, yaitu si jiwa kecil (inner child) yang tanpa disadari mengetuk pintu hati, mencoba mengungkapkan cinta dan kebutuhannya. Sering kali dia muncul dengan berbagai cara, dari emosi yang terpicu saat anak tantrum, kemarahan berlebih ketika anak berbuat salah, hingga tuntutan tak realistis terhadap pasangan. Jiwa kecil, bagian dari kepribadian pada masa kecil dan bertumbuh, yang membentuk diri kita pada masa dewasa ini."
-        }
-    ]
+  "buku": [
+    {
+      "id": 3,
+      "gambar": "https://cdn.gramedia.com/uploads/items/9786020523316_Melangkah_UV_Spot_R4-1__w149_hauto.jpg",
+      "nama_buku": "Melangkah",
+      "kategori_buku": "Novel",
+      "harga": "Rp. 93.000,00",
+      "stok": 10,
+      "pengarang": "Js. Khairen",
+      "penerbit": "Gramedia Widiasarana Indonesia",
+      "deskripsi": "Listrik padam di seluruh Jawa dan Bali secara misterius! Ancaman nyata kekuatan baru yang hendak menaklukkan Nusantara. Saat yang sama, empat sahabat mendarat di Sumba, hanya untuk mendapati nasib ratusan juta manusia ada di tangan mereka! Empat mahasiswa ekonomi ini, harus bertarung melawan pasukan berkuda yang bisa melontarkan listrik! Semua dipersulit oleh seorang buronan tingkat tinggi bertopeng pahlawan yang punya rencana mengerikan."
+    },
+    {
+      "id": 4,
+      "gambar": "https://cdn.gramedia.com/uploads/items/Seni_Beranjak__w149_hauto.png",
+      "nama_buku": "Seni Beranjak",
+      "kategori_buku": "Pengembangan Diri",
+      "harga": "Rp. 39.500,00",
+      "stok": 15,
+      "pengarang": "Muthia Sayekti",
+      "penerbit": "Psikologi Corner",
+      "deskripsi": "Move on” sering dianggap sebagai orang-orang yang sudah berhasil melalukan proses “perpindahan hati” dari satu orang ke orang yang lain. Contohnya: si A yang sempat berpacaran dengan si B, harus putus, dan selang beberapa waktu berhasil memiliki pasangan baru. Proses itulah yang orang-orang amini sebagai makna dari frasa move on. Tapi benarkah move on hanya berkutat pada permasalahan relasi antara seseorang dengan mantan kekasihnya di masa lalu?"
+    },
+    {
+      "id": 5,
+      "gambar": "https://cdn.gramedia.com/uploads/items/9786020628837_start-with-wh__w149_hauto.jpg",
+      "nama_buku": "Start With Why",
+      "kategori_buku": "Pengembangan Diri",
+      "harga": "Rp. 75.000,00",
+      "stok": 25,
+      "pengarang": "Simon Sinek",
+      "penerbit": "Gramedia Pustaka Utama",
+      "deskripsi": "Start with Why menggunakan contoh dunia nyata untuk menguraikan konsep Lingkaran Emas yang merangkum pentingnya mengidentifikasi tujuan untuk keberadaan organisasi sebelum hal lainnya, kemudian mengambil tindakan untuk membuat visi menjadi kenyataan. Asal mula perusahaan harus menjadi alasannya. Begitu juga dengan kehidupan pribadi kita juga. Setiap orang atau organisasi dapat menjelaskan apa yang mereka lakukan; beberapa dapat menjelaskan bagaimana mereka berbeda atau lebih baik; tetapi sangat sedikit yang bisa mengartikulasikan mengapa."
+    },
+    {
+      "id": 6,
+      "gambar": "https://cdn.gramedia.com/uploads/items/9786020642581_NUNCHI_C_1_4-1__w149_hauto.jpg",
+      "nama_buku": "Nunchi: Seni Membaca Pikiran dan Perasaan Orang Lain",
+      "kategori_buku": "Pengembangan Diri",
+      "harga": "Rp. 80.000,00",
+      "stok": 50,
+      "pengarang": "Euny Hong",
+      "penerbit": "Gramedia Pustaka Utama",
+      "deskripsi": "Nunchi, indra keenam orang Korea untuk membaca keadaan dan memahami apa yang dipikirkan dan dirasakan orang lain, telah dipraktikkan selama lebih dari 5.000 tahun dan diyakini telah melambungkan Korea dari salah satu negara termiskin menjadi salah satu negara paling maju di dunia. Para orangtua di Korea percaya bahwa mengajarkan nunchi pada anak mereka sama pentingnya dengan mengajari anak mereka menyeberang jalan dengan selamat. Nunchi adalah suatu bentuk kecerdasan emosional yang dapat dipelajari siapa pun. Yang kita butuhkan hanyalah mata dan telinga untuk memperhatikan orang lain, bukan menonjolkan diri sendiri. Buku ini akan menunjukkan caranya."
+    },
+    {
+      "id": 7,
+      "gambar": "https://cdn.gramedia.com/uploads/items/9786022203087_Jajan-Squad__w149_hauto.jpg",
+      "nama_buku": "Jajan Squad",
+      "kategori_buku": "Komik",
+      "harga": "Rp. 77.000,00",
+      "stok": 20,
+      "pengarang": "Dito Satrio",
+      "penerbit": "Bukune",
+      "deskripsi": "Jajan Squad"
+    },
+    {
+      "id": 8,
+      "gambar": "https://ebooks.gramedia.com/ebook-covers/32481/general_small_covers/ID_HCO2016MTH04PPSNSN.jpeg",
+      "nama_buku": "Platypus Police Squad: Never Say Narwhal",
+      "kategori_buku": "Komik",
+      "harga": "Rp. 129.000,00",
+      "stok": 18,
+      "pengarang": "Jarrett J. Krosoczka",
+      "penerbit": "Harper Collins",
+      "deskripsi": "From Jarrett J. Krosoczka comes , the final installment in the hilarious, high-action illustrated middle grade series featuring two platypus detectives, perfect for fans of Diary of a Wimpy Kid, Big Nate, and Jarrett's own Lunch Lady series."
+    },
+    {
+      "id": 9,
+      "gambar": "https://cdn.gramedia.com/uploads/items/9789790066359_Journey-Of-Joe__w149_hauto.jpg",
+      "nama_buku": "Journey Of Joe",
+      "kategori_buku": "Gaya Hidup",
+      "harga": "Rp. 110.000,00",
+      "stok": 12,
+      "pengarang": "Regi Suryo",
+      "penerbit": "AgroMedia Pustaka",
+      "deskripsi": "Melihat perkembangan industri kopi yang kian menjamur dan konsumen yang kian lebih dalam mengulik sisi lain dari kopi membuat literasi mengenai berbagai hal tentang kopi menjadi suatu hal yang perlu dihadirkan. Buku ini menjadi salah satu media bagi orang-orang yang ingin mengetahui segala pengetahuan tentang kopi."
+    },
+    {
+      "id": 10,
+      "gambar": "https://cdn.gramedia.com/uploads/items/journey__w149_hauto.jpg",
+      "nama_buku": "Re-Parenting Journey",
+      "kategori_buku": "Gaya Hidup",
+      "harga": "Rp. 119.000,00",
+      "stok": 22,
+      "pengarang": "LUSY SUTEDJO, Aleima Sharuna",
+      "penerbit": "Kawah Media Pustaka Pt",
+      "deskripsi": "Seiring bertambahnya usia, kadang kita melupakan satu bagian penting dalam diri kita, yaitu si jiwa kecil (inner child) yang tanpa disadari mengetuk pintu hati, mencoba mengungkapkan cinta dan kebutuhannya. Sering kali dia muncul dengan berbagai cara, dari emosi yang terpicu saat anak tantrum, kemarahan berlebih ketika anak berbuat salah, hingga tuntutan tak realistis terhadap pasangan. Jiwa kecil, bagian dari kepribadian pada masa kecil dan bertumbuh, yang membentuk diri kita pada masa dewasa ini."
+    }
+  ]
 }
