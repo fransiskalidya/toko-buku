@@ -1,17 +1,6 @@
 {
   "buku": [
     {
-      "id": 3,
-      "gambar": "https://cdn.gramedia.com/uploads/items/9786020523316_Melangkah_UV_Spot_R4-1__w149_hauto.jpg",
-      "nama_buku": "Melangkah",
-      "kategori_buku": "Novel",
-      "harga": "Rp. 93.000,00",
-      "stok": 10,
-      "pengarang": "Js. Khairen",
-      "penerbit": "Gramedia Widiasarana Indonesia",
-      "deskripsi": "Listrik padam di seluruh Jawa dan Bali secara misterius! Ancaman nyata kekuatan baru yang hendak menaklukkan Nusantara. Saat yang sama, empat sahabat mendarat di Sumba, hanya untuk mendapati nasib ratusan juta manusia ada di tangan mereka! Empat mahasiswa ekonomi ini, harus bertarung melawan pasukan berkuda yang bisa melontarkan listrik! Semua dipersulit oleh seorang buronan tingkat tinggi bertopeng pahlawan yang punya rencana mengerikan."
-    },
-    {
       "id": 4,
       "gambar": "https://cdn.gramedia.com/uploads/items/Seni_Beranjak__w149_hauto.png",
       "nama_buku": "Seni Beranjak",

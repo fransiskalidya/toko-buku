@@ -6,6 +6,8 @@ import Dashboard from "../components/admin/Dashboard";
 import Login from "../components/frontend/auth/Login";
 import Register from "../components/frontend/auth/Register";
 import EditUser from "../container/admin/EditUser";
+import EditBuku from "../container/Buku/Editbuku";
+
 
 const routes =[
     {path: '/admin', exact: true, name: "Admin"},
@@ -17,7 +19,8 @@ const routes =[
     {path: '/admin/RegisterAdmin', exact: true, name: "RegisterAdmin", component: RegisterAdmin},
     {path: '/admin/auth/Login', exact: true, name: "Login", component: Login},
     {path: '/admin/auth/Register', exact: true, name: "Register", component: Register},
-    {path: '/admin/EditUser', exact: true, name: "EditUser", component: EditUser}
+    {path: '/admin/EditUser', exact: true, name: "EditUser", component: EditUser},
+    {path: '/admin/EditBuku', exact: true, name: "EditUser", component: EditBuku}
 
 ];
 export default routes;

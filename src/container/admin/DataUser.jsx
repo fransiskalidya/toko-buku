@@ -82,7 +82,7 @@ class DataUser extends Component {
 
 
                                     <form>
-                                        <b><label htmlFor="gambar" form="gambar">Gambar Buku</label></b><br></br><br></br>
+                                        <b><label htmlFor="gambar" form="gambar">Foto User</label></b><br></br><br></br>
                                         <div className="col-md-12 mb-3">
                                             <input type="file" className="form-control" id="gambar" name="gambar" placeholder="Link Gambar" onChange={this.handleAddBuku} />
                                         </div>
