@@ -54,7 +54,7 @@ class DaftarBuku extends Component {
     }
 
     handleSaveButton = () => {        // fungsi untuk meng-handle tombol simpan
-        fetch('http://localhost:3002/buku', {
+        fetch('http://localhost:3003/buku', {
             method: 'post',
             headers: {
                 'Accept': 'application/json',

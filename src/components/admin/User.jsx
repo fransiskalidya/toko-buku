@@ -1,27 +1,33 @@
-import React from "react";
+import React, { Component } from 'react';
+//import React from "react";
 import { Link } from 'react-router-dom';
 
-const daftarUser = (props) => {
-    return (
-        <tr>
-            <td><img class="rounded-image" src={props.gambar} alt="GambarUser" /></td>
-            <td>{props.nama}</td>
-            <td>{props.nomor_telp}</td>
-            <td>{props.email}</td>
-            <td>{props.password}</td>
-            <td>{props.alamat}</td>
-            <td>
-                <button className="btn btn-sm btn-danger" onClick={() => props.hapusDataUser(props.idUser)}>Hapus</button>
-            </td>
-            <td>
-                <Link className="nav-link" to="/admin/EditUser">
-                    <button className="btn btn-sm btn-success" href="container/admin/EditUser">Edit</button>
-                </Link>
-            </td>
-        </tr>
+class user extends Component {
+
+    render() {
+        const prmData = this.props.data;
+        return (
+            <tr>
+                <td>{prmData.id}</td>
+                <td><img class="rounded-image" src={prmData.gambar} alt="GambarUser" /></td>
+                <td>{prmData.nama}</td>
+                <td>{prmData.nomor_telp}</td>
+                <td>{prmData.email}</td>
+                <td>{prmData.password}</td>
+                <td>{prmData.alamat}</td>
+                <td>
+                    <button className="btn btn-sm btn-danger" style={{ marginRight: '10px' }} onClick={() => this.props.hapusDataUser(prmData.id)}>Hapus</button>
+                    <button className="btn btn-sm btn-warning" onClick={() => this.props.EditDataUser(prmData)}>Edit</button>
+
+                </td>
+                <td>
+
+                </td>
+            </tr>
 
 
-    )
+        )
+    }
 }
 
-export default daftarUser;
+export default user;

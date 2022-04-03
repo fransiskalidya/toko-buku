@@ -4,7 +4,7 @@
       "id": 2,
       "gambar": "https://imageio.forbes.com/specials-images/imageserve/5f64397931669e167fc57eaf/960x0.jpg?fit=bounds&format=jpg&width=960",
       "nama": "Reyandi Azari",
-      "nomor_tlp": "081234567890",
+      "nomor_telp": "081234567890",
       "email": "reyndiA06@gmail.com",
       "password": "reyndiiAzr06",
       "alamat": "Jl. Soekarno No.9, Malang"
@@ -13,10 +13,28 @@
       "id": 3,
       "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8STvJzWajeNMT1wHuzVzy8iLetYUD9_5Ngg&usqp=CAU",
       "nama": "Ajeng Bianda",
-      "nomor_tlp": "082345780971",
+      "nomor_telp": "082345780971",
       "email": "biaaje98@gmail.com",
       "password": "bndaje98",
       "alamat": "Jl. Mastrip No.28, Madiun"
+    },
+    {
+      "id": 1,
+      "gambar": "",
+      "nama": "Ardila Lukita",
+      "nomor_telp": "089516577314",
+      "email": "asfadfad",
+      "password": "ardila08",
+      "alamat": "Magetan"
+    },
+    {
+      "id": 4,
+      "gambar": "",
+      "nama": "Anggi Indah",
+      "nomor_telp": "089516577315",
+      "email": "anggi123@gmail.com",
+      "password": "anggi123",
+      "alamat": "Magetan"
     }
   ]
 }
