@@ -3,7 +3,7 @@
     {
       "id": 4,
       "gambar": "https://cdn.gramedia.com/uploads/items/Seni_Beranjak__w149_hauto.png",
-      "nama_buku": "Seni Beranjak",
+      "nama_buku": "Seni Beranjak diri",
       "kategori_buku": "Pengembangan Diri",
       "harga": "Rp. 39.500,00",
       "stok": 15,
@@ -65,18 +65,6 @@
       "pengarang": "Regi Suryo",
       "penerbit": "AgroMedia Pustaka",
       "deskripsi": "Melihat perkembangan industri kopi yang kian menjamur dan konsumen yang kian lebih dalam mengulik sisi lain dari kopi membuat literasi mengenai berbagai hal tentang kopi menjadi suatu hal yang perlu dihadirkan. Buku ini menjadi salah satu media bagi orang-orang yang ingin mengetahui segala pengetahuan tentang kopi."
-    },
-    {
-      "gambar": "https://drive.google.com/file/d/1gg41V6J49t_E84GyHcgiTHwrSqWzEstF/view?usp=sharing",
-      "nama_buku": "Aroma Karsa",
-      "kategori_buku": "Novel",
-      "harga": "Rp. 75.000,00",
-      "stok": "12",
-      "pengarang": "Dee Lestari",
-      "penerbit": "Media Kita",
-      "deskripsi": "Aroma Karsa adalah novel bergenre fiction, romance, dan fantasy. Novel ini mengisahkan seorang pemuda yang dibesarkan di kawasan kumuh Bantar Gebang bernama Jati Wesi. Ia memiliki kemampuan penciuman aroma yang melebihi orang biasa",
-      "idBuku": 1648959215635,
-      "id": 1649057261647
     },
     {
       "gambar": "https://cdn.gramedia.com/uploads/items/9786022203087_Jajan-Squad__w149_hauto.jpg",

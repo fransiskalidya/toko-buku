@@ -5,14 +5,16 @@ import Navbar from "./Navbar";
 import { useState } from "react";
 import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
 
+
+
 class DaftarBuku extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state ={
+        this.state = {
             listBuku: [],
-            totalData: 0,
-            isUpdate: false,
-            Notif:{
+            totalData: 0,       // Untuk Hitung All Data
+            isUpdate: false,    // Untuk Fileter Fungsi 
+            Notif: {            // Untuk Tampung respon Dari Server
                 alertShow: false,
                 actionType: '',
                 responCode: 0,
@@ -28,19 +30,17 @@ class DaftarBuku extends Component {
                 penerbit: "",
                 deskripsi: ""
             }
+            
         }
     }
-    
-    
-   
-
 
     ambilDataDariServerAPI = () => {
         fetch('http://localhost:3003/buku')  // alamat URL API yang ingin kita ambil datanya
             .then(response => response.json())  // ubah response data dari URL API menjadi sebuah data json
-            .then(jsonHasilAmbilDariAPI => {    // data json hasil ambil dari API kita masukkan ke dalam listBuku pada state 
+            .then(jsonHasilAmbilDariAPI => {    // data json hasil ambil dari API kita masukkan ke dalam listUserpada state 
                 this.setState({
-                    listBuku: jsonHasilAmbilDariAPI
+                    listBuku: jsonHasilAmbilDariAPI,
+                    totalData: jsonHasilAmbilDariAPI.length
                 })
             })
     }
@@ -50,67 +50,7 @@ class DaftarBuku extends Component {
 
     }
 
-    handleHapusBuku = (data) => {
-        fetch(`http://localhost:3003/buku/${data}`, { method: 'DELETE' })  // alamat URL API yang ingin kita HAPUS datanya
-            .then(res => {      // ketika proses hapus berhasil, maka ambil data dari server API lokal 
-                this.ambilDataDariServerAPI()
-            })
-    }
-    
-    handleEditBuku = (data) =>{
-        console.log(data.id);
-        console.log(data);
-        this.setState({
-            insertBuku:data,
-            isUpdate: true
-        })
-
-    }
-    
-
-    updateDataBuku= ()=>{
-        const dataUpdate = this.state.insertBuku;
-        const id=dataUpdate.id;
-
-        fetch('http://localhost:3003/buku/' + id,{
-            method:'PUT',
-            headers:{
-                'Accept' : 'application/json',
-                'Content-Type':'application/json'
-            },
-            body:JSON.stringify(dataUpdate)
-        }).then((res)=>{
-            console.log(res)
-            console.log("Status Update", res.status)
-
-            // menampung respon dari server
-            // this.setState({
-            //     Notif:{
-            //         alertShow:true,
-            //         actionType: 'updated',
-            //         responCode:res.status,
-            //     }
-            // })
-            this.ambilDataDariServerAPI();
-            this.ClearForm();
-        })
-    }
-
-    handleAddBuku = (event) => {      // fungsi untuk meng-handle form tambah data Buku
-        // console.log(event.target.files[0])
-        let formInsertBuku = { ...this.state.insertBuku };
-        let timestamp = new Date().getTime();    
-        if (!this.state.isUpdate) { //Cek Jika Update Data Idnya Tidak Di Ubah
-            formInsertBuku['id'] = timestamp;        
-        } 
-        
-        formInsertBuku[event.target.name] = event.target.value;      // menyimpan data onchange ke formInsertBuku sesuai dengan target yang diisi
-        this.setState({
-            insertBuku: formInsertBuku
-        });
-
-    }
-    tambahBaru =()=>{
+    SaveNewDataBuku = () => {        // fungsi untuk meng-handle tombol simpan
         fetch('http://localhost:3003/buku', {
             method: 'post',
             headers: {
@@ -118,36 +58,140 @@ class DaftarBuku extends Component {
                 'Content-Type': 'application/json'
 
             },
-            body: JSON.stringify(this.state.insertBuku)      // kirimkan ke body request untuk data Buku yang akan ditambahkan (insert)
+            body: JSON.stringify(this.state.insertBuku)      // kirimkan ke body request untuk data yang akan ditambahkan (insert)
         })
             .then((Response) => {
+                console.log(Response)
+                console.log("Status Create", Response.status)
+                this.setState({
+                    Notif: {
+                        alertShow: true,
+                        actionType: 'created',
+                        responCode: Response.status,
+                    }
+                })
+
                 this.ambilDataDariServerAPI();      // reload / refresh data
+                this.ClearForm();
             });
     }
 
-    handleSaveButton = () => {        // fungsi untuk meng-handle tombol simpan
-        if (this.state.isUpdate) {
-            console.log("hallo");
-            this.updateDataBuku();
-        } else {
-            this.tambahBaru();
+    EditDataBuku = () => {
+        const dataUpdate = this.state.insertBuku;
+        const id = dataUpdate.id;
+        fetch('http://localhost:3003/buku/' + id, {
+            method: 'PUT',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dataUpdate)
+        })
+            .then((Response) => {
+                console.log(Response)
+                console.log("Status Update", Response.status)
+                this.setState({
+                    Notif: {
+                        alertShow: true,
+                        actionType: 'updated',
+                        responCode: Response.status,
+                    }
+                })
+
+                this.ambilDataDariServerAPI();      // reload / refresh data
+                this.ClearForm();
+            });
+    }
+
+
+
+    HapusDataBuku = (data) => {
+        const id = data;
+
+        fetch('http://localhost:3003/buku/' + id, {
+            method: 'DELETE'
+        })  // alamat URL API yang ingin kita HAPUS datanya
+            .then(Response => {      // ketika proses hapus berhasil, maka ambil data dari server API lokal 
+                console.log(Response)
+                console.log("Status Delete", Response.status)
+
+                // Untuk Tampung respon Dari Server
+                this.setState({
+                    Notif: {
+                        alertShow: true,
+                        actionType: 'deleted',
+                        responCode: Response.status,
+                    }
+                })
+                this.ambilDataDariServerAPI();
+                this.ClearForm();
+            });
+    }
+
+    handleChange = (event) => {      // fungsi untuk meng-handle form tambah data
+        const NumberingId = this.state.totalData + 1;
+        let formInsertBuku = { ...this.state.insertBuku };
+        if (!this.state.isUpdate) { //Cek Jika Update Data Idnya Tidak Di Ubah
+            formInsertBuku['id'] = NumberingId;
         }
+        formInsertBuku[event.target.name] = event.target.value;      // menyimpan data onchange ke formInsertBukusesuai dengan target yang diisi
+        this.setState({
+            insertBuku: formInsertBuku
+        });
     }
 
     ClearForm = () => {
 
         this.setState({
             isUpdate: false,
-            insertUser: {
+            insertBuku: {
                 id: 1,
                 gambar: "",
-                nama: "",
-                nomor_telp: "",
-                email: "",
-                password: "",
-                alamat: ""
+                nama_buku: "",
+                kategori_buku: "",
+                harga: "",
+                stok: "",
+                pengarang: "",
+                penerbit: "",
+                deskripsi: ""
             }
         })
+        // Mengembalikan Nilai Awal Notif
+        setInterval(() => {
+            this.setState({
+                Notif: {
+                    alertShow: false,
+                    actionType: '',
+                    responCode: 0,
+                }
+            })
+        }, 4500);
+    }
+
+    handleSaveButton = () => {
+        if (this.state.isUpdate) {
+            this.EditDataBuku();
+        } else {
+            this.SaveNewDataBuku();
+        }
+    }
+
+    handleEditBuku = (data) => {
+        console.log('Update id', data.id);
+        console.log('Update arry', data);
+        this.setState({
+            insertBuku: data,
+            isUpdate: true
+        })
+    }
+
+    handleHapusBuku = (data) => {
+        console.log('Id delete =', data)
+        const id = data;
+
+        if (window.confirm('Apakah data ' + id + ' ?')) {
+            this.HapusDataBuku(id)
+        }
     }
 
     render() {
@@ -171,43 +215,43 @@ class DaftarBuku extends Component {
                                     <form>
                                         <b><label htmlFor="gambar" form="gambar">Gambar Buku</label></b><br></br><br></br>
                                         {/* <div className="col-md-12 mb-3">
-                                            <input type="file" className="form-control" id="gambar" name="gambar" placeholder="Link Gambar" onChange={this.handleAddBuku} />
+                                            <input type="file" className="form-control" id="gambar" name="gambar" placeholder="Link Gambar" onChange={this.handleChange} />
                                         </div> */}
                                          <div className="form-floating mb-3">
-                                            <input placeholder="ID" onChange={this.handleAddBuku} className="form-control" id="gambar" name="gambar" />
+                                            <input placeholder="ID" onChange={this.handleChange} className="form-control" id="gambar" name="gambar" value={this.state.insertBuku.gambar}/>
                                             <label htmlFor="gambar">Gambar</label>
                                         </div>
                                         <br></br>
                                         <div className="form-floating mb-3">
-                                            <input disabled placeholder="ID" onChange={this.handleAddBuku} className="form-control" id="id" name="id" />
+                                            <input disabled placeholder="ID" onChange={this.handleChange} className="form-control" id="id" name="id" />
                                             <label htmlFor="id">ID</label>
                                         </div>
                                         <div className="form-floating mb-3">
-                                            <input className="form-control" id="nama_buku" name="nama_buku" type="text" placeholder="Judul" onChange={this.handleAddBuku} value={this.state.insertBuku.nama_buku}/>
+                                            <input className="form-control" id="nama_buku" name="nama_buku" type="text" placeholder="Judul" onChange={this.handleChange} value={this.state.insertBuku.nama_buku}/>
                                             <label htmlFor="nama_buku" >Judul</label>
                                         </div>
                                         <div className="form-floating mb-3">
-                                            <input className="form-control" id="kategori_buku" name="kategori_buku" type="text" placeholder="Kategori Buku" onChange={this.handleAddBuku} value={this.state.insertBuku.kategori_buku}/>
+                                            <input className="form-control" id="kategori_buku" name="kategori_buku" type="text" placeholder="Kategori Buku" onChange={this.handleChange} value={this.state.insertBuku.kategori_buku}/>
                                             <label htmlFor="kategori_buku" >Kategori</label>
                                         </div>
                                         <div className="form-floating mb-3">
-                                            <input className="form-control" type="text" id="harga" name="harga" placeholder="Harga Buku" onChange={this.handleAddBuku} value={this.state.insertBuku.harga}/>
+                                            <input className="form-control" type="text" id="harga" name="harga" placeholder="Harga Buku" onChange={this.handleChange} value={this.state.insertBuku.harga}/>
                                             <label htmlFor="harga" >Harga</label>
                                         </div>
                                         <div className="form-floating mb-3">
-                                            <input className="form-control" type="text" id="stok" name="stok" placeholder="Stok Buku" onChange={this.handleAddBuku} value={this.state.insertBuku.stok}/>
+                                            <input className="form-control" type="text" id="stok" name="stok" placeholder="Stok Buku" onChange={this.handleChange} value={this.state.insertBuku.stok}/>
                                             <label htmlFor="stok" >Stok</label>
                                         </div>
                                         <div className="form-floating mb-3">
-                                            <input className="form-control" type="text" id="pengarang" name="pengarang" placeholder="Pengarang" onChange={this.handleAddBuku} value={this.state.insertBuku.pengarang}/>
+                                            <input className="form-control" type="text" id="pengarang" name="pengarang" placeholder="Pengarang" onChange={this.handleChange} value={this.state.insertBuku.pengarang}/>
                                             <label htmlFor="pengarang" >Pengarang</label>
                                         </div>
                                         <div className="form-floating mb-3">
-                                            <input className="form-control" type="text" id="penerbit" name="penerbit" placeholder="Penerbit" onChange={this.handleAddBuku} value={this.state.insertBuku.penerbit}/>
+                                            <input className="form-control" type="text" id="penerbit" name="penerbit" placeholder="Penerbit" onChange={this.handleChange} value={this.state.insertBuku.penerbit}/>
                                             <label htmlFor="penerbit" >Penerbit</label>
                                         </div>
                                         <div className="form-floating mb-3">
-                                            <textarea className="form-control" type="text" id="deskripsi" name="deskripsi" placeholder="Deskripsi Buku" onChange={this.handleAddBuku} value={this.state.insertBuku.deskripsi}/>
+                                            <textarea className="form-control" type="text" id="deskripsi" name="deskripsi" placeholder="Deskripsi Buku" onChange={this.handleChange} value={this.state.insertBuku.deskripsi}/>
                                             <label htmlFor="deskripsi">Deskripsi</label>
                                         </div>
 
@@ -266,7 +310,7 @@ class DaftarBuku extends Component {
                                 {
                                     this.state.listBuku.map(buku => {    // looping dan masukkan untuk setiap data yang ada di listBuku ke variabel Buku
                                         // return <DataBuku key={buku.id} gambar={buku.gambar} nama_buku={buku.nama_buku} kategori_buku={buku.kategori_buku} harga={buku.harga} stok={buku.stok} pengarang={buku.pengarang} penerbit={buku.penerbit} deskripsi={buku.deskripsi} idBuku={buku.id} hapusDataBuku={this.handleHapusBuku} editDataBuku={this.handleEditBuku}/>     // mappingkan data json dari API sesuai dengan kategorinya
-                                        <DataBuku key={buku.id} data={buku} hapusDataBuku={this.handleHapusBuku} editDataBuku={this.handleEditBuku}/>
+                                       return <DataBuku key={buku.id} data={buku} hapusDataBuku={this.handleHapusBuku} EditDataBuku={this.handleEditBuku}/>
                                     })
                                 }
                             </tbody>
