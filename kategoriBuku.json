@@ -1,20 +1,24 @@
 {
-    "kategori" :[
-        {
-            "id" : 1,
-            "nama" : "Novel"
-        },
-        {
-            "id" : 2,
-            "nama" : "Pengembangan diri"
-        },
-        {
-            "id" : 3,
-            "nama" : "Komik"
-        },
-        {
-            "id" : 4,
-            "nama" : "Gaya Hidup"
-        }
-    ]
+  "kategori": [
+    {
+      "id": 1,
+      "nama": "Novel"
+    },
+    {
+      "id": 2,
+      "nama": "Pengembangan diri"
+    },
+    {
+      "id": 3,
+      "nama": "Komik"
+    },
+    {
+      "id": 4,
+      "nama": "Gaya Hidup"
+    },
+    {
+      "id": 5,
+      "nama": "Pemandangan Laut"
+    }
+  ]
 }

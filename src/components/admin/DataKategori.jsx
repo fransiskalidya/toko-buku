@@ -1,18 +1,29 @@
-import React from "react";
+import React, { Component } from 'react';
+//import React from "react";
+import { Link } from 'react-router-dom';
 
-const DataKategori = (props)=>{
-  return (
-          <tr>
-            <td>{props.idKategori}</td>
-            <td>{props.nama}</td>
+class kategori extends Component {
+
+  render() {
+    
+    const prmData = this.props.data;
+    return (
+        <tr>
+            <td>{prmData.id}</td>
+            <td>{prmData.nama}</td>
             <td>
-              <button type="submit" className="btn btn-danger">
-                Delete
-              </button>
+                <button className="btn btn-sm btn-danger" style={{ marginRight: '10px' }} onClick={() => this.props.hapusDataKategori(prmData.id)}>Hapus</button>
+                <button className="btn btn-sm btn-warning" onClick={() => this.props.EditDataKategori(prmData)}>Edit</button>
+
             </td>
-          </tr>
-          
-          )
+            <td>
+
+            </td>
+        </tr>
+
+
+    )
+}
 }
 
-export default DataKategori;
+export default kategori;
