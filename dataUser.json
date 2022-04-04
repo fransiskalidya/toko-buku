@@ -19,22 +19,22 @@
       "alamat": "Jl. Mastrip No.28, Madiun"
     },
     {
-      "id": 1,
-      "gambar": "",
-      "nama": "Ardila Lukita",
+      "id": 7,
+      "gambar": "https://cdn.popbela.com/content-images/post/20190415/analog-camera-attractive-beautiful-1960183-0c58169f42c1196e4e6f2cd29c957e08_750x500.jpg",
+      "nama": "Ardila Lukita Sari",
       "nomor_telp": "089516577314",
-      "email": "asfadfad",
-      "password": "ardila08",
+      "email": "ardilalukita4@gmail.com",
+      "password": "ardila0814",
       "alamat": "Magetan"
     },
     {
       "id": 4,
-      "gambar": "",
+      "gambar": "https://it.godaddy.com/blog/wp-content/uploads/vendere-foto-online-guida.jpg",
       "nama": "Anggi Indah",
-      "nomor_telp": "089516577315",
+      "nomor_telp": "081234556789",
       "email": "anggi123@gmail.com",
-      "password": "anggi123",
-      "alamat": "Magetan"
+      "password": "anggi123._",
+      "alamat": "Malang"
     }
   ]
 }

@@ -208,9 +208,10 @@ class DataUser extends Component {
                                         <Alert data={this.state.Notif} />
                                         <b><label htmlFor="gambar" form="gambar">Foto User</label></b><br></br><br></br>
                                         <div className="col-md-12 mb-3">
-                                            <input type="file" className="form-control" id="gambar" name="gambar" placeholder="Link Gambar" onChange={this.handleChange} value={this.state.insertUser.gambar} />
+                                            <textarea className="form-control" id="gambar" name="gambar" placeholder="Link Gambar"  onChange={this.handleChange} value={this.state.insertUser.gambar} />
                                         </div>
                                         <br></br>
+
                                         <div className="form-floating mb-3">
                                             <input className="form-control" id="nama" name="nama" placeholder="Nama User" onChange={this.handleChange} value={this.state.insertUser.nama} />
                                             <label htmlFor="nama" form="nama">Nama</label>

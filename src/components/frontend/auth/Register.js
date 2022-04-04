@@ -131,7 +131,13 @@ export default class Register extends Component {
                         <div className="fieldRegister">
                             <label>Foto</label><br></br>
                             <div className="col-md-12 mb-3"></div>
-                            <input type="file" className="form-control" id="gambar" name="gambar" placeholder="gambar" onChange={this.handleChange} />
+                            <input type="file" className="form-control" id="gambar" name="gambar" placeholder="gambar" disabled = "disabled" onChange={this.handleChange} />
+                        </div>
+
+                        <div className="fieldRegister">
+                            <label>Foto</label><br></br>
+                            <div className="col-md-12 mb-3"></div>
+                           <textarea className="form-control" id="gambar" name="gambar" placeholder="gambar" onChange={this.handleChange} />
                         </div>
 
                         <div className="fieldRegister">
