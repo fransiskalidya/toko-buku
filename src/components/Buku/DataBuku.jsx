@@ -15,10 +15,10 @@ const daftarBuku = (props) => {
                 <td>{props.deskripsi}</td>
                 <td>
                 <button className="btn btn-sm btn-danger" onClick={() => props.hapusDataBuku(props.idBuku)}>Hapus</button>              
-                <Link className="nav-link" to="/admin/EditBuku">
-                    <button className="btn btn-sm btn-warning" href="container/Buku/Editbuku">Edit</button>
+                {/* <Link className="nav-link" to="/admin/EditBuku"> */}
+                <button className="btn btn-sm btn-warning" onClick={() => props.editDataBuku(props)}>Edit</button>
 
-                </Link>
+                {/* </Link> */}
                 </td>
                
                 </tr>

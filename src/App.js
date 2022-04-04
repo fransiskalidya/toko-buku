@@ -10,7 +10,7 @@ import DaftarBuku from './container/Buku/DaftarBuku';
 import Kategori from './container/admin/Kategori';
 import MasterLayout from './layouts/admin/MasterLayout';
 import Dashboard from "./components/admin/Dashboard";
-
+// import Content from './layouts/frontend/Content';
 
 function App() {
   return (<Router>
@@ -20,6 +20,7 @@ function App() {
             <Route exact path='/' component={Login} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
+            {/* <Route path="/product" component={Content} /> */}
             {/* <Route path="/admin/register" component={RegisterAdmin} /> */}
             {/* <Route path="/admin/daftarBuku" component={DaftarBuku} />
             <Route path="/admin/kategori" component={Kategori} /> */}

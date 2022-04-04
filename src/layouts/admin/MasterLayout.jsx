@@ -1,6 +1,6 @@
 import React from "react";
-import '../../assets/css/styles.css';
-import '../../assets/js/scripts';
+import '../../assets/admin/css/styles.css';
+import '../../assets/admin/js/scripts';
 
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 

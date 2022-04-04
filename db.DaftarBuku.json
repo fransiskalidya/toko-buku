@@ -67,15 +67,28 @@
       "deskripsi": "Melihat perkembangan industri kopi yang kian menjamur dan konsumen yang kian lebih dalam mengulik sisi lain dari kopi membuat literasi mengenai berbagai hal tentang kopi menjadi suatu hal yang perlu dihadirkan. Buku ini menjadi salah satu media bagi orang-orang yang ingin mengetahui segala pengetahuan tentang kopi."
     },
     {
-      "id": 10,
-      "gambar": "https://cdn.gramedia.com/uploads/items/journey__w149_hauto.jpg",
-      "nama_buku": "Re-Parenting Journey",
-      "kategori_buku": "Gaya Hidup",
-      "harga": "Rp. 119.000,00",
-      "stok": 22,
-      "pengarang": "LUSY SUTEDJO, Aleima Sharuna",
-      "penerbit": "Kawah Media Pustaka Pt",
-      "deskripsi": "Seiring bertambahnya usia, kadang kita melupakan satu bagian penting dalam diri kita, yaitu si jiwa kecil (inner child) yang tanpa disadari mengetuk pintu hati, mencoba mengungkapkan cinta dan kebutuhannya. Sering kali dia muncul dengan berbagai cara, dari emosi yang terpicu saat anak tantrum, kemarahan berlebih ketika anak berbuat salah, hingga tuntutan tak realistis terhadap pasangan. Jiwa kecil, bagian dari kepribadian pada masa kecil dan bertumbuh, yang membentuk diri kita pada masa dewasa ini."
+      "gambar": "https://drive.google.com/file/d/1gg41V6J49t_E84GyHcgiTHwrSqWzEstF/view?usp=sharing",
+      "nama_buku": "Aroma Karsa",
+      "kategori_buku": "Novel",
+      "harga": "Rp. 75.000,00",
+      "stok": "12",
+      "pengarang": "Dee Lestari",
+      "penerbit": "Media Kita",
+      "deskripsi": "Aroma Karsa adalah novel bergenre fiction, romance, dan fantasy. Novel ini mengisahkan seorang pemuda yang dibesarkan di kawasan kumuh Bantar Gebang bernama Jati Wesi. Ia memiliki kemampuan penciuman aroma yang melebihi orang biasa",
+      "idBuku": 1648959215635,
+      "id": 1649057261647
+    },
+    {
+      "gambar": "https://cdn.gramedia.com/uploads/items/9786022203087_Jajan-Squad__w149_hauto.jpg",
+      "nama_buku": "Jajan Squad",
+      "kategori_buku": "Komik",
+      "harga": "Rp. 77.000,00",
+      "stok": 20,
+      "pengarang": "Dito Satrio",
+      "penerbit": "Bukune",
+      "deskripsi": "Jajan",
+      "idBuku": 7,
+      "id": 1649057350614
     }
   ]
 }
