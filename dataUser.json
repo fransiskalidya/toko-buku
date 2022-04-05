@@ -1,7 +1,7 @@
 {
   "user": [
     {
-      "id": 2,
+      "id": 1,
       "gambar": "https://imageio.forbes.com/specials-images/imageserve/5f64397931669e167fc57eaf/960x0.jpg?fit=bounds&format=jpg&width=960",
       "nama": "Reyandi Azari",
       "nomor_telp": "081234567890",
@@ -10,31 +10,41 @@
       "alamat": "Jl. Soekarno No.9, Malang"
     },
     {
-      "id": 3,
-      "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8STvJzWajeNMT1wHuzVzy8iLetYUD9_5Ngg&usqp=CAU",
-      "nama": "Ajeng Bianda",
-      "nomor_telp": "082345780971",
-      "email": "biaaje98@gmail.com",
-      "password": "bndaje98",
-      "alamat": "Jl. Mastrip No.28, Madiun"
-    },
-    {
-      "id": 7,
-      "gambar": "https://cdn.popbela.com/content-images/post/20190415/analog-camera-attractive-beautiful-1960183-0c58169f42c1196e4e6f2cd29c957e08_750x500.jpg",
+      "id": 2,
+      "gambar": "",
       "nama": "Ardila Lukita Sari",
       "nomor_telp": "089516577314",
-      "email": "ardilalukita4@gmail.com",
-      "password": "ardila0814",
+      "email": "ardilalukita5@gmail.com",
+      "password": "ardila08",
+      "alamat": "Magetan"
+    },
+    {
+      "id": 3,
+      "gambar": "",
+      "nama": "Bayu Raharja",
+      "nomor_telp": "089516577314",
+      "email": "bayu123@gmail.com",
+      "password": "bayu123",
       "alamat": "Magetan"
     },
     {
       "id": 4,
-      "gambar": "https://it.godaddy.com/blog/wp-content/uploads/vendere-foto-online-guida.jpg",
-      "nama": "Anggi Indah",
-      "nomor_telp": "081234556789",
-      "email": "anggi123@gmail.com",
-      "password": "anggi123._",
-      "alamat": "Malang"
+      "gambar": "",
+      "nama": "Ardila Lukita Sari",
+      "nomor_telp": "089516577314",
+      "email": "ardilalukita4@gmail.com",
+      "password": "ARDILA08",
+      "alamat": "Magetan",
+      "role": "admin"
+    },
+    {
+      "id": 5,
+      "gambar": "",
+      "nama": "Bayu Raharja",
+      "nomor_telp": "089671760003",
+      "email": "bayu123@gmail.com",
+      "password": "LfGgvn5DKCsw5aG",
+      "alamat": "Magetan"
     }
   ]
 }

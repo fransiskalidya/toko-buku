@@ -25,7 +25,8 @@ class DataUser extends Component {
                 nomor_telp: "",
                 email: "",
                 password: "",
-                alamat: ""
+                alamat: "",
+                role: "admin"
             }
         }
     }
@@ -129,6 +130,7 @@ class DataUser extends Component {
         let formInsertUser = { ...this.state.insertUser };
         if (!this.state.isUpdate) { //Cek Jika Update Data Idnya Tidak Di Ubah
             formInsertUser['id'] = NumberingId;
+            formInsertUser['role'] = "admin";
         }
         formInsertUser[event.target.name] = event.target.value;      // menyimpan data onchange ke formInsertUsersesuai dengan target yang diisi
         this.setState({
@@ -147,7 +149,8 @@ class DataUser extends Component {
                 nomor_telp: "",
                 email: "",
                 password: "",
-                alamat: ""
+                alamat: "",
+                role:"admin"
             }
         })
         // Mengembalikan Nilai Awal Notif
@@ -232,6 +235,10 @@ class DataUser extends Component {
                                             <input type="password" className="form-control" id="password" name="password" placeholder="password" onChange={this.handleChange} value={this.state.insertUser.password} />
                                             <label htmlFor="password" form="password">Password</label>
                                         </div>
+                                        <div className="form-floating mb-3">
+                                            <input type="text" className="form-control" id="role" name="role" placeholder="password" disabled="disabled" onChange={this.handleChange} value="admin" />
+                                            <label htmlFor="role" form="role">Role</label>
+                                        </div>
 
                                     </form>
                                     <div className="d-flex align-items-center justify-content-between mt-4 mb-0">
@@ -274,6 +281,7 @@ class DataUser extends Component {
                                     <th>E-mail</th>
                                     <th>Password</th>
                                     <th>Alamat</th>
+                                    <th>Role</th>
                                     <th width="150px">Action</th>
                                     <th></th>
                                 </tr>

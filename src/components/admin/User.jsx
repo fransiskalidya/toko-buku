@@ -15,6 +15,7 @@ class user extends Component {
                 <td>{prmData.email}</td>
                 <td>{prmData.password}</td>
                 <td>{prmData.alamat}</td>
+                 <td>{prmData.role}</td>
                 <td>
                     <button className="btn btn-sm btn-danger" style={{ marginRight: '10px' }} onClick={() => this.props.hapusDataUser(prmData.id)}>Hapus</button>
                     <button className="btn btn-sm btn-warning" onClick={() => this.props.EditDataUser(prmData)}>Edit</button>

@@ -10,6 +10,7 @@ const daftarUser = (props) => {
             <td>{props.email}</td>
             <td>{props.password}</td>
             <td>{props.alamat}</td>
+            <td>{props.role}</td>
             <td>
                 <button className="btn btn-sm btn-danger" style={{ marginleft: '10px' }} onClick={() => props.hapusDataUser(props.idUser)}>Hapus</button>
                 <button className="btn btn-sm btn-danger" onClick={() => props.hapusDataUser(props.idUser)}>Edit</button>
