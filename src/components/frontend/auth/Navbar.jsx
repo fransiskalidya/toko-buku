@@ -15,7 +15,10 @@ const Navbar=()=>{
                 <Link className="nav-link" to={"/register"}>Register</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to={"/admin/daftarBuku"}>List Buku</Link>
+                <Link className="nav-link" to='#'>Keranjang</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to='#'>Akun</Link>
               </li>
             </ul>
           </div>
