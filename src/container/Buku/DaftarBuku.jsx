@@ -129,10 +129,10 @@ class DaftarBuku extends Component {
     }
 
     handleChange = (event) => {      // fungsi untuk meng-handle form tambah data
-        const NumberingId = this.state.totalData + 1;
+        let timestamp = new Date().getTime(); 
         let formInsertBuku = { ...this.state.insertBuku };
         if (!this.state.isUpdate) { //Cek Jika Update Data Idnya Tidak Di Ubah
-            formInsertBuku['id'] = NumberingId;
+            formInsertBuku['id'] = timestamp;
         }
         formInsertBuku[event.target.name] = event.target.value;      // menyimpan data onchange ke formInsertBukusesuai dengan target yang diisi
         this.setState({

@@ -8,16 +8,18 @@ import Register from "./components/frontend/auth/Register";
 import RegisterAdmin from "./components/admin/RegisterAdmin";
 import DaftarBuku from './container/Buku/DaftarBuku';
 import Kategori from './container/admin/Kategori';
+import Index from './container/endUser/Index';
+
 import MasterLayout from './layouts/admin/MasterLayout';
 import Dashboard from "./components/admin/Dashboard";
-// import Content from './layouts/frontend/Content';
+// import MasterCust from './layouts/frontend/Master';
 
 function App() {
   return (<Router>
       
 
           <Switch>
-            <Route exact path='/' component={Login} />
+            <Route exact path='/' component={Index} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             {/* <Route path="/product" component={Content} /> */}
@@ -25,6 +27,7 @@ function App() {
             {/* <Route path="/admin/daftarBuku" component={DaftarBuku} />
             <Route path="/admin/kategori" component={Kategori} /> */}
             <Route path="/admin" name="Admin" render={(props)=> <MasterLayout {...props} />} />
+            {/* <Route path="/cust" name="Cust" render={(props)=> <MasterCust {...props} />} /> */}
 
           </Switch>   
      </Router>

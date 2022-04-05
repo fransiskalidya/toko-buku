@@ -10,7 +10,7 @@ export default class Login extends Component {
         return (
             <div>
             <Navbar />
-            <div className="containerLogin">
+            <div class="containerLogin">
                 <div className="col-lg-2"></div>
                 <form>
                     <div className="title">
