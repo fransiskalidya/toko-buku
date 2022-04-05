@@ -203,13 +203,13 @@ class DataUser extends Component {
                     <div className="row justify-content-center">
                         <div className="col-lg-5">
                             <div className="card shadow-lg border-0 rounded-lg mt-5">
-                                <div className="card-header"><h3 className="text-center font-weight-light my-4">Input Data User</h3></div>
+                                <div className="card-header"><h3 className="text-center font-weight-light my-4">Input Data Admin</h3></div>
                                 <img src="https://miro.medium.com/max/1400/1*zEiP4QVsrm4UdaEEiNmpWg.jpeg" class="card-img-top" alt="bookStore"></img>
                                 <div className="card-body">
 
                                     <form>
                                         <Alert data={this.state.Notif} />
-                                        <b><label htmlFor="gambar" form="gambar">Foto User</label></b><br></br><br></br>
+                                        <b><label htmlFor="gambar" form="gambar">Foto Admin</label></b><br></br><br></br>
                                         <div className="col-md-12 mb-3">
                                             <textarea className="form-control" id="gambar" name="gambar" placeholder="Link Gambar"  onChange={this.handleChange} value={this.state.insertUser.gambar} />
                                         </div>

@@ -45,6 +45,16 @@
       "email": "bayu123@gmail.com",
       "password": "LfGgvn5DKCsw5aG",
       "alamat": "Magetan"
+    },
+    {
+      "id": 6,
+      "gambar": "https://th.bing.com/th/id/R.bf318c5e7ba66ba0c2e9583b4a12ffd2?rik=qgeBlLm9OeBbKg&riu=http%3a%2f%2f3.bp.blogspot.com%2f-YB4azI9Q6JA%2fUeVkSVlG4XI%2fAAAAAAAANeE%2fnbzZI3N8uvo%2fw1200-h630-p-k-no-nu%2fbm-image-710571.jpeg&ehk=RY1V6QGFulLsp5HXqEm2emJy0CiArVpzPXQZFLHsRgk%3d&risl=&pid=ImgRaw&r=0",
+      "nama": "Muhammad Akbar Azmi",
+      "nomor_telp": "082335239329",
+      "email": "akbarazmi34@gmail.com",
+      "role": "user",
+      "password": "cvfbg345",
+      "alamat": "Jalan Panjaitan"
     }
   ]
 }
