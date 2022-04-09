@@ -51,9 +51,10 @@ export default class Index extends Component {
                                 <h2>SHOP</h2>
                             </div>
                         </div>
+                        <div className="row">
 
                         {/* <div className="row row-cols-2">
-                            <div className="col-3"> */}
+                            // <div className="col-3"> */}
                                 {
                                     this.state.listBuku.map(buku => {    // looping dan masukkan untuk setiap data yang ada di listBuku ke variabel Buku
 
@@ -62,6 +63,7 @@ export default class Index extends Component {
                                 }
                             {/* </div>
                         </div> */}
+                        </div>
 
                     </div>
                 </body>

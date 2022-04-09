@@ -16,7 +16,9 @@ const IndexBuku = (props) => {
                     </div>
                 </div>
              </div>
-    //   </div>
+  
+
+
     )
 }
 

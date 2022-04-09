@@ -9,6 +9,7 @@ import RegisterAdmin from "./components/admin/RegisterAdmin";
 import DaftarBuku from './container/Buku/DaftarBuku';
 import Kategori from './container/admin/Kategori';
 import Index from './container/endUser/Index';
+import Keranjang from './container/endUser/Keranjang';
 
 import MasterLayout from './layouts/admin/MasterLayout';
 import Dashboard from "./components/admin/Dashboard";
@@ -22,6 +23,8 @@ function App() {
             <Route exact path='/' component={Index} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
+            <Route path="/keranjang" component={Keranjang} />
+
             {/* <Route path="/product" component={Content} /> */}
             {/* <Route path="/admin/register" component={RegisterAdmin} /> */}
             {/* <Route path="/admin/daftarBuku" component={DaftarBuku} />
