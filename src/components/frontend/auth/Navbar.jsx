@@ -15,7 +15,10 @@ const Navbar=()=>{
                 <Link className="nav-link" to={"/register"}>Register</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to='#'>Keranjang</Link>
+                <Link className="nav-link" to={"/keranjang"}>Keranjang</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/checkout"}>Checkout</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to='#'>Akun</Link>

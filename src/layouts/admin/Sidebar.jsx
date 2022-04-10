@@ -9,14 +9,14 @@ const Sidebar = () => {
                 <div className="nav">
                     <div className="sb-sidenav-menu-heading">Menu Utama</div>
                     <Link className="nav-link" to="/admin/dashboard">
-                        <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
+                        <div className="sb-nav-link-icon"><i className="fa fa-tachometer-alt"></i></div>
                         Dashboard
                     </Link>
                     <div className="sb-sidenav-menu-heading">Menu Admin</div>
                     <Link className="nav-link collapsed" to="/admin/DaftarBuku" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                        <div className="sb-nav-link-icon"><i className="fas fa-columns"></i></div>
+                        <div className="sb-nav-link-icon"><i className="fa fa-columns"></i></div>
                         Olah Data
-                        <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down"></i></div>
+                        <div className="sb-sidenav-collapse-arrow"><i className="fa fa-angle-down"></i></div>
                     </Link>
                     <div className="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav className="sb-sidenav-menu-nested nav">
@@ -27,16 +27,16 @@ const Sidebar = () => {
                     </div>
                     <div className="sb-sidenav-menu-heading">Autentikasi</div>
                     {/* <Link className="nav-link collapsed" to="/admin/kategori" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                    <div className="sb-nav-link-icon"><i className="fas fa-book-open"></i></div>
+                    <div className="sb-nav-link-icon"><i className="fa fa-book-open"></i></div>
                     Autentikasi User
-                    <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down"></i></div>
+                    <div className="sb-sidenav-collapse-arrow"><i className="fa fa-angle-down"></i></div>
                 </Link>
                 <div className="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                     <nav className="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages"> */}
                     <Link className="nav-link collapsed" to="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                        <div className="sb-nav-link-icon"><i className="fas fa-book-open"></i></div>
+                        <div className="sb-nav-link-icon"><i className="fa fa-book-open"></i></div>
                         Autentikasi User
-                        <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down"></i></div>
+                        <div className="sb-sidenav-collapse-arrow"><i className="fa fa-angle-down"></i></div>
                     </Link>
                     <div className="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                         <nav className="sb-sidenav-menu-nested nav">
@@ -47,7 +47,7 @@ const Sidebar = () => {
                     </div>
                     {/* <Link className="nav-link collapsed" to="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
                             Error
-                            <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down"></i></div>
+                            <div className="sb-sidenav-collapse-arrow"><i className="fa fa-angle-down"></i></div>
                         </Link> */}
                     <div className="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                         <nav className="sb-sidenav-menu-nested nav">
@@ -60,11 +60,11 @@ const Sidebar = () => {
 
                     <div className="sb-sidenav-menu-heading">Transaksi</div>
                     <Link className="nav-link" to="charts.html">
-                        <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
+                        <div className="sb-nav-link-icon"><i className="fa fa-chart-area"></i></div>
                         List Order Customers
                     </Link>
                     {/* <Link className="nav-link" to="tables.html">
-                    <div className="sb-nav-link-icon"><i className="fas fa-table"></i></div>
+                    <div className="sb-nav-link-icon"><i className="fa fa-table"></i></div>
                     Tables
                 </Link> */}
                 </div>

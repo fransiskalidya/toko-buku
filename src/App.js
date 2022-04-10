@@ -13,6 +13,7 @@ import Keranjang from './container/endUser/Keranjang';
 
 import MasterLayout from './layouts/admin/MasterLayout';
 import Dashboard from "./components/admin/Dashboard";
+import Checkout from './container/Checkout/Checkout';
 // import MasterCust from './layouts/frontend/Master';
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route path="/keranjang" component={Keranjang} />
+            <Route path="/checkout" component={Checkout} />
+
 
             {/* <Route path="/product" component={Content} /> */}
             {/* <Route path="/admin/register" component={RegisterAdmin} /> */}
