@@ -18,7 +18,7 @@ class daftarBuku extends Component{
                 <td>{prmData.deskripsi}</td>
                 <td>
                     <button className="btn btn-sm btn-danger" style={{ marginRight: '10px' }} onClick={() => this.props.hapusDataBuku(prmData.id)}>Hapus</button>
-                    <button className="btn btn-sm btn-warning" onClick={() => this.props.EditDataBuku(prmData)}>Edit</button>
+                    <button className="btn btn-sm btn-warning" onClick={() => this.props.EditDataBuku(prmData)} data-toggle="modal" data-target="#exampleModalLong">Edit</button>
 
                 </td>
                 <td>
