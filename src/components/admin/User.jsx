@@ -18,7 +18,7 @@ class user extends Component {
                  <td>{prmData.role}</td>
                 <td>
                     <button className="btn btn-sm btn-danger" style={{ marginRight: '10px' }} onClick={() => this.props.hapusDataUser(prmData.id)}>Hapus</button>
-                    <button className="btn btn-sm btn-warning" onClick={() => this.props.EditDataUser(prmData)}>Edit</button>
+                    <button className="btn btn-sm btn-warning" onClick={() => this.props.EditDataUser(prmData)} data-toggle="modal" data-target="#exampleModalLong">Edit</button>
 
                 </td>
                 <td>

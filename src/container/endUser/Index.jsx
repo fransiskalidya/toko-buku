@@ -34,7 +34,7 @@ export default class Index extends Component {
             <div>
                 <Navbar />
                 <div className="jumbotron">
-                    <div className="container">
+                    <div className="container" id="jb">
                         <h1 className="display-4"><b>Welcome to <br />BookTown Store</b></h1>
                         <p className="lead"><b>Berbelanja buku kini lebih mudah dengan BookTown Store</b></p>
                         <hr className="my-4" />
@@ -45,12 +45,14 @@ export default class Index extends Component {
                 </div>
 
                 <body>
-                    <div className="container">
+                    <div className="container" style={{border:"none"}}>
                         <div className="row text-center">
                             <div className="col" style={{ marginTop: '30px' }}>
                                 <h2>SHOP</h2>
                             </div>
                         </div>
+                        <br />
+                        <br />
                         <div className="row">
 
                         {/* <div className="row row-cols-2">

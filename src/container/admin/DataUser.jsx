@@ -70,6 +70,8 @@ class DataUser extends Component {
 
                 this.ambilDataDariServerAPI();      // reload / refresh data
                 this.ClearForm();
+                this.closeDialog();
+
             });
     }
 
@@ -97,6 +99,7 @@ class DataUser extends Component {
 
                 this.ambilDataDariServerAPI();      // reload / refresh data
                 this.ClearForm();
+                this.closeDialog();
             });
     }
 
@@ -191,23 +194,33 @@ class DataUser extends Component {
         }
     }
 
-
+    closeDialog = () => {
+        console.log("masuk");
+        window.location.reload();
+      }
 
     render() {
         return (
 
             <div className="card mb-4" >
 
-                {/* input data */}
-                < div className="container" >
-                    <div className="row justify-content-center">
-                        <div className="col-lg-5">
-                            <div className="card shadow-lg border-0 rounded-lg mt-5">
-                                <div className="card-header"><h3 className="text-center font-weight-light my-4">Input Data Admin</h3></div>
-                                <img src="https://miro.medium.com/max/1400/1*zEiP4QVsrm4UdaEEiNmpWg.jpeg" class="card-img-top" alt="bookStore"></img>
-                                <div className="card-body">
+<div className="modal fade" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLongTitle">Form Data Buku</h5>
+                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div className="modal-body">
 
-                                    <form>
+                <div className="card">
+                <img src="https://miro.medium.com/max/1400/1*zEiP4QVsrm4UdaEEiNmpWg.jpeg" class="card-img-top" alt="bookStore"></img>
+
+                  <div className="card-body">
+                    {/* form pengisian */}
+                    <form>
                                         <Alert data={this.state.Notif} />
                                         <b><label htmlFor="gambar" form="gambar">Foto Admin</label></b><br></br><br></br>
                                         <div className="col-md-12 mb-3">
@@ -241,17 +254,23 @@ class DataUser extends Component {
                                         </div>
 
                                     </form>
-                                    <div className="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                        <button type="submit" className="btn btn-success center-block" onClick={this.handleSaveButton}>Submit</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  </div>
+
+
+
                 </div>
-                <br />
-                <br />
-                <br />
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
+                <button type="submit" className="btn btn-primary center-block" onClick={this.handleSaveButton}>Simpan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+                {/* input data */}
+
 
                 {/* tabel read data */}
 
@@ -267,6 +286,8 @@ class DataUser extends Component {
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Cari" aria-label="Recipient's username" aria-describedby="basic-addon4" />
                             <button class="btn btn-warning" id="btnNavbarSearch" type="button">Cari</button>
+                            <button className="btn btn-success" id="btnNavbarSearch" type="button" style={{ marginInlineStart: '10px' }} data-toggle="modal" data-target="#exampleModalLong">Tambah data</button>
+
                         </div>
                     </form>
 

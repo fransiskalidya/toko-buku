@@ -10,10 +10,10 @@ export default class Keranjang extends Component {
             <div style={{ marginTop: '90px' }}>
                 <Navbar />
                 <div className="page-header">
-                    <div className="container">
+                    <div className="container" style={{border:"none"}}>
                         <div className="row">
                             <div className="col-md-12">
-                            <a href="{{ url('/') }}" class="btn btn-primary"><i class="tf-ion-android-delet"></i>Kembali</a>
+                            <a href="/" class="btn btn-primary"><i class="tf-ion-android-delet"></i>Kembali</a>
                             </div>
                             {/* looping data jika sudah ada database */}
                             <DataKeranjang />

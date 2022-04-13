@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import './DaftarBuku.css';
 import DataBuku from '../../components/Buku/DataBuku';
 import Navbar from "./Navbar";
+import Alert from '../../components/Alert';
 import { useState } from "react";
 import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -74,6 +75,8 @@ class DaftarBuku extends Component {
 
                 this.ambilDataDariServerAPI();      // reload / refresh data
                 this.ClearForm();
+                this.closeDialog();
+
             });
     }
 
@@ -104,11 +107,7 @@ class DaftarBuku extends Component {
                 this.closeDialog();
             });
     }
-    //close modal
-    closeDialog=()=> {
-        let d = document.getElementById('close')
-        d.onclick();
-    }
+
 
 
 
@@ -201,6 +200,12 @@ class DaftarBuku extends Component {
         }
     }
 
+    //close modal
+    closeDialog = () => {
+        console.log("masuk");
+        window.location.reload();
+    }
+
     render() {
 
         return (
@@ -225,6 +230,7 @@ class DaftarBuku extends Component {
                                         {/* form pengisian */}
 
                                         <form>
+                                        <Alert data={this.state.Notif} />
                                             <b><label htmlFor="gambar" form="gambar">Gambar Buku</label></b><br></br><br></br>
                                             {/* <div className="col-md-12 mb-3">
                                             <input type="file" className="form-control" id="gambar" name="gambar" placeholder="Link Gambar" onChange={this.handleChange} />
