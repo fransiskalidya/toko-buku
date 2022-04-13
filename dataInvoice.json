@@ -1,0 +1,12 @@
+{
+    "invoice": [
+      {
+        "id": 1,
+        "gambar": "https://imageio.forbes.com/specials-images/imageserve/5f64397931669e167fc57eaf/960x0.jpg?fit=bounds&format=jpg&width=960",
+        "nama": "Reyandi Azari",
+        "total": "Rp. 350.000,00",
+        "status": "Payment Accepted",
+        "tanggal": "14 April 2022"
+      }
+    ]
+}

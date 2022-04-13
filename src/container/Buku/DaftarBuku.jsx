@@ -298,7 +298,7 @@ class DaftarBuku extends Component {
                 {/* data buku */}
                 <div className="card mb-4">
                     <div className="card-header">
-                        <i className="fas fa-table me-1"></i>
+                        <i className="fa fa-table me-1"></i>
                         Daftar Buku BookTown
                     </div>
                     <br></br>

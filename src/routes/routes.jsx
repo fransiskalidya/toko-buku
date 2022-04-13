@@ -7,6 +7,7 @@ import Login from "../components/frontend/auth/Login";
 import Register from "../components/frontend/auth/Register";
 import EditUser from "../container/admin/EditUser";
 import EditBuku from "../container/Buku/Editbuku";
+import Invoice from "../container/admin/Invoice";
 //import Checkout from '../container/Checkout/Checkout';
 // import Index from "../container/endUser/Index";
 
@@ -22,6 +23,7 @@ const routes =[
     {path: '/admin/auth/Register', exact: true, name: "Register", component: Register},
     {path: '/admin/EditUser', exact: true, name: "EditUser", component: EditUser},
     {path: '/admin/EditBuku', exact: true, name: "EditBuku", component: EditBuku},
+    {path: '/admin/Invoice', exact: true, name: "Invoice", component: Invoice},
     //{path: '/admin/Checkout', exact: true, name: "Checkout", component: Checkout},
     // {path: '/cust/index', exact: true, name: "Index", component: Index}
 
