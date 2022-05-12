@@ -6,8 +6,8 @@ const IndexBuku = (props) => {
 
         // <div className="row">
             <div className="col-6 col-md-3">
-                <div className="card" style={{margin: '10px'}}>
-                    <img src={props.gambar} className="card-img-top"/>
+                <div className="card" style={{margin: '10px',height:'540px'}}>
+                    <img src={props.gambar} className="card-img-top" style={{height:'270px'}}/>
                     <div className="card-body">
                         <h5 className="card-title">{props.nama_buku}</h5>
                         <p className="card-text">{props.pengarang}</p>
