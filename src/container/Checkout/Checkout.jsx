@@ -173,7 +173,7 @@ const Checkout = () => {
 												<div class="row">
 													<div class="col-50">
 														<div className="my-md-0"></div>
-														<h2 className="title-sub">Rp. 500.000,00</h2>
+														<h2 className="title-sub"> Rp. 500.000,00</h2>
 														<br></br>
 														<h2 className="title-sub1">Rp. 20.000,00</h2>
 													</div>

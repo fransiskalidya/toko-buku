@@ -230,7 +230,7 @@ class Invoice extends Component {
                                                 <label htmlFor="nama" form="nama">Nama</label>
                                             </div>
                                             <div className="form-floating mb-3">
-                                                <input type="text" className="form-control" id="total" name="total" placeholder="Tota;" onChange={this.handleChange} value={this.state.insertInvoice.total} />
+                                                <input type="text" className="form-control" id="total" name="total" placeholder="Total" onChange={this.handleChange} value={this.state.insertInvoice.total} />
                                                 <label htmlFor="total" form="total">Total</label>
                                             </div>
                                             <div className="form-floating mb-3">
@@ -251,6 +251,7 @@ class Invoice extends Component {
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
+                                <button type="submit" className="btn btn-primary center-block" onClick={this.handleSaveButton}>Simpan</button>
                             </div>
                         </div>
                     </div>

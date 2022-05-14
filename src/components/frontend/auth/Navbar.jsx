@@ -21,7 +21,7 @@ const Navbar=()=>{
                 <Link className="nav-link" to={"/checkout"}>Checkout</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to='#'>Akun</Link>
+                <Link className="nav-link" to={"/akun"}>Akun</Link>
               </li>
             </ul>
           </div>
