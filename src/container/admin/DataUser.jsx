@@ -153,7 +153,7 @@ class DataUser extends Component {
                 email: "",
                 password: "",
                 alamat: "",
-                role:"admin"
+                role: "admin"
             }
         })
         // Mengembalikan Nilai Awal Notif
@@ -197,133 +197,140 @@ class DataUser extends Component {
     closeDialog = () => {
         console.log("masuk");
         window.location.reload();
-      }
+    }
 
     render() {
         return (
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">Data User</h1>
+                <ol class="breadcrumb mb-4">
+                    <li class="breadcrumb-item active">Data User</li>
+                </ol>
 
-            <div className="card mb-4" >
+                <div className="card mb-4" >
 
-<div className="modal fade" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-          <div className="modal-dialog" role="document">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title" id="exampleModalLongTitle">Form Data Buku</h5>
-                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div className="modal-body">
+                    <div className="modal fade" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                    <h5 className="modal-title" id="exampleModalLongTitle">Form Data Buku</h5>
+                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div className="modal-body">
 
-                <div className="card">
-                <img src="https://miro.medium.com/max/1400/1*zEiP4QVsrm4UdaEEiNmpWg.jpeg" class="card-img-top" alt="bookStore"></img>
+                                    <div className="card">
+                                        <img src="https://miro.medium.com/max/1400/1*zEiP4QVsrm4UdaEEiNmpWg.jpeg" class="card-img-top" alt="bookStore"></img>
 
-                  <div className="card-body">
-                    {/* form pengisian */}
-                    <form>
-                                        <Alert data={this.state.Notif} />
-                                        <b><label htmlFor="gambar" form="gambar">Foto Admin</label></b><br></br><br></br>
-                                        <div className="col-md-12 mb-3">
-                                            <textarea className="form-control" id="gambar" name="gambar" placeholder="Link Gambar"  onChange={this.handleChange} value={this.state.insertUser.gambar} />
+                                        <div className="card-body">
+                                            {/* form pengisian */}
+                                            <form>
+                                                <Alert data={this.state.Notif} />
+                                                <b><label htmlFor="gambar" form="gambar">Foto Admin</label></b><br></br><br></br>
+                                                <div className="col-md-12 mb-3">
+                                                    <textarea className="form-control" id="gambar" name="gambar" placeholder="Link Gambar" onChange={this.handleChange} value={this.state.insertUser.gambar} />
+                                                </div>
+                                                <br></br>
+
+                                                <div className="form-floating mb-3">
+                                                    <input className="form-control" id="nama" name="nama" placeholder="Nama User" onChange={this.handleChange} value={this.state.insertUser.nama} />
+                                                    <label htmlFor="nama" form="nama">Nama</label>
+                                                </div>
+                                                <div className="form-floating mb-3">
+                                                    <input type="text" className="form-control" id="nomor_telp" name="nomor_telp" placeholder="Nomor Telepon" onChange={this.handleChange} value={this.state.insertUser.nomor_telp} />
+                                                    <label htmlFor="nomor_telp" form="nomor_telp">Nomor Telepon</label>
+                                                </div>
+                                                <div className="form-floating mb-3">
+                                                    <input type="text" className="form-control" id="email" name="email" placeholder="E-mail" onChange={this.handleChange} value={this.state.insertUser.email} />
+                                                    <label htmlFor="email" form="email">E-mail</label>
+                                                </div>
+                                                <div className="form-floating mb-3">
+                                                    <input type="textarea" className="form-control" id="alamat" name="alamat" placeholder="alamat" onChange={this.handleChange} value={this.state.insertUser.alamat} />
+                                                    <label htmlFor="alamat" form="alamat">Alamat</label>
+                                                </div>
+                                                <div className="form-floating mb-3">
+                                                    <input type="password" className="form-control" id="password" name="password" placeholder="password" onChange={this.handleChange} value={this.state.insertUser.password} />
+                                                    <label htmlFor="password" form="password">Password</label>
+                                                </div>
+                                                <div className="form-floating mb-3">
+                                                    <input type="text" className="form-control" id="role" name="role" placeholder="password" disabled="disabled" onChange={this.handleChange} value="admin" />
+                                                    <label htmlFor="role" form="role">Role</label>
+                                                </div>
+
+                                            </form>
                                         </div>
-                                        <br></br>
-
-                                        <div className="form-floating mb-3">
-                                            <input className="form-control" id="nama" name="nama" placeholder="Nama User" onChange={this.handleChange} value={this.state.insertUser.nama} />
-                                            <label htmlFor="nama" form="nama">Nama</label>
-                                        </div>
-                                        <div className="form-floating mb-3">
-                                            <input type="text" className="form-control" id="nomor_telp" name="nomor_telp" placeholder="Nomor Telepon" onChange={this.handleChange} value={this.state.insertUser.nomor_telp} />
-                                            <label htmlFor="nomor_telp" form="nomor_telp">Nomor Telepon</label>
-                                        </div>
-                                        <div className="form-floating mb-3">
-                                            <input type="text" className="form-control" id="email" name="email" placeholder="E-mail" onChange={this.handleChange} value={this.state.insertUser.email} />
-                                            <label htmlFor="email" form="email">E-mail</label>
-                                        </div>
-                                        <div className="form-floating mb-3">
-                                            <input type="textarea" className="form-control" id="alamat" name="alamat" placeholder="alamat" onChange={this.handleChange} value={this.state.insertUser.alamat} />
-                                            <label htmlFor="alamat" form="alamat">Alamat</label>
-                                        </div>
-                                        <div className="form-floating mb-3">
-                                            <input type="password" className="form-control" id="password" name="password" placeholder="password" onChange={this.handleChange} value={this.state.insertUser.password} />
-                                            <label htmlFor="password" form="password">Password</label>
-                                        </div>
-                                        <div className="form-floating mb-3">
-                                            <input type="text" className="form-control" id="role" name="role" placeholder="password" disabled="disabled" onChange={this.handleChange} value="admin" />
-                                            <label htmlFor="role" form="role">Role</label>
-                                        </div>
-
-                                    </form>
-                  </div>
 
 
 
-                </div>
-              </div>
-              <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
-                <button type="submit" className="btn btn-primary center-block" onClick={this.handleSaveButton}>Simpan</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-                {/* input data */}
-
-
-                {/* tabel read data */}
-
-                < div class="card mb-4" >
-                    <div class="card-header">
-                        <i class="fa fa-table me-1"></i>
-                        Data User
-                    </div>
-
-
-                    <br />
-                    <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-4 my-md-0">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Cari" aria-label="Recipient's username" aria-describedby="basic-addon4" />
-                            <button class="btn btn-warning" id="btnNavbarSearch" type="button">Cari</button>
-                            <button className="btn btn-success" id="btnNavbarSearch" type="button" style={{ marginInlineStart: '10px' }} data-toggle="modal" data-target="#exampleModalLong">Tambah data</button>
-
+                                    </div>
+                                </div>
+                                <div className="modal-footer">
+                                    <button type="button" className="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
+                                    <button type="submit" className="btn btn-primary center-block" onClick={this.handleSaveButton}>Simpan</button>
+                                </div>
+                            </div>
                         </div>
-                    </form>
-
-                    <div class="card-body">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Foto</th>
-                                    <th>Nama</th>
-                                    <th>Nomor Telepon</th>
-                                    <th>E-mail</th>
-                                    <th>Password</th>
-                                    <th>Alamat</th>
-                                    <th>Role</th>
-                                    <th width="150px">Action</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {
-                                    this.state.listUser.map(user => {    // looping dan masukkan untuk setiap data yang ada di listUserke variabel User
-                                        return (
-                                            <User key={user.id}
-                                                data={user}
-                                                hapusDataUser={this.handleHapusUser} EditDataUser={this.handleEditUser} />     // mappingkan data json dari API sesuai dengan kategorinya
-                                        )
-                                    })
-                                }
-
-
-                            </tbody>
-                        </table>
                     </div>
+
+
+                    {/* input data */}
+
+
+                    {/* tabel read data */}
+
+                    < div class="card mb-4" >
+                        <div class="card-header">
+                            <i class="fa fa-table me-1"></i>
+                            Data User
+                        </div>
+
+
+                        <br />
+                        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-4 my-md-0">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Cari" aria-label="Recipient's username" aria-describedby="basic-addon4" />
+                                <button class="btn btn-warning" id="btnNavbarSearch" type="button">Cari</button>
+                                <button className="btn btn-success" id="btnNavbarSearch" type="button" style={{ marginInlineStart: '10px' }} data-toggle="modal" data-target="#exampleModalLong">Tambah data</button>
+
+                            </div>
+                        </form>
+
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Foto</th>
+                                        <th>Nama</th>
+                                        <th>Nomor Telepon</th>
+                                        <th>E-mail</th>
+                                        <th>Password</th>
+                                        <th>Alamat</th>
+                                        <th>Role</th>
+                                        <th width="150px">Action</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        this.state.listUser.map(user => {    // looping dan masukkan untuk setiap data yang ada di listUserke variabel User
+                                            return (
+                                                <User key={user.id}
+                                                    data={user}
+                                                    hapusDataUser={this.handleHapusUser} EditDataUser={this.handleEditUser} />     // mappingkan data json dari API sesuai dengan kategorinya
+                                            )
+                                        })
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div >
                 </div >
             </div >
+
         );
     };
 }

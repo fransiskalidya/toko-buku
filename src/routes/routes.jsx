@@ -2,7 +2,7 @@ import DaftarBuku from '../container/Buku/DaftarBuku';
 import Kategori from '../container/admin/Kategori';
 import RegisterAdmin from "../components/admin/RegisterAdmin";
 import DataUser from "../container/admin/DataUser";
-import Dashboard from "../components/admin/Dashboard";
+import Dashboard from "../container/admin/Dashboard";
 import Login from "../components/frontend/auth/Login";
 import Register from "../components/frontend/auth/Register";
 import EditUser from "../container/admin/EditUser";

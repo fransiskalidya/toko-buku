@@ -187,92 +187,97 @@ class Kategori extends Component {
 
   render() {
     return (
+      <div class="container-fluid px-4">
+        <h1 class="mt-4">Data Kategori Buku</h1>
+        <ol class="breadcrumb mb-4">
+          <li class="breadcrumb-item active">Data Kategori Buku</li>
+        </ol>
+        <div className="card mb-4">
 
-      <div className="card mb-4">
+          <div className="modal fade" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div className="modal-dialog" role="document">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h5 className="modal-title" id="exampleModalLongTitle">Form Data Buku</h5>
+                  <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div className="modal-body">
 
-        <div className="modal fade" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-          <div className="modal-dialog" role="document">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title" id="exampleModalLongTitle">Form Data Buku</h5>
-                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div className="modal-body">
+                  <div className="card">
+                    <img src="https://img.jakpost.net/c/2020/04/21/2020_04_21_93387_1587459137._large.jpg" class="card-img-top" alt="bookStore"></img>
 
-                <div className="card">
-                <img src="https://img.jakpost.net/c/2020/04/21/2020_04_21_93387_1587459137._large.jpg" class="card-img-top" alt="bookStore"></img>
-
-                  <div className="card-body">
-                    {/* form pengisian */}
-                    <form>
-                    <Alert data={this.state.Notif} />
-                    <div className="form-floating mb-3">
-                      <input disabled className="form-control" id="id" name="id" placeholder="ID" />
-                      <label htmlFor="id" for="id">ID</label>
-                    </div>
-                    <div className="form-floating mb-3">
-                      <input className="form-control" id="nama" name="nama" type="text" placeholder="Kategori" onChange={this.handleChange} value={this.state.insertKategori.nama} />
-                      <label htmlFor="nama_kategori" for="inputPassword">Kategori</label>
-                    </div>
-                    {/* <div className="d-flex align-items-center justify-content-between mt-4 mb-0">
+                    <div className="card-body">
+                      {/* form pengisian */}
+                      <form>
+                        <Alert data={this.state.Notif} />
+                        <div className="form-floating mb-3">
+                          <input disabled className="form-control" id="id" name="id" placeholder="ID" />
+                          <label htmlFor="id" for="id">ID</label>
+                        </div>
+                        <div className="form-floating mb-3">
+                          <input className="form-control" id="nama" name="nama" type="text" placeholder="Kategori" onChange={this.handleChange} value={this.state.insertKategori.nama} />
+                          <label htmlFor="nama_kategori" for="inputPassword">Kategori</label>
+                        </div>
+                        {/* <div className="d-flex align-items-center justify-content-between mt-4 mb-0">
                       <button type="submit" className="btn btn-primary center-block" onClick={this.handleSaveButton}>Submit</button>
                     </div> */}
-                  </form>
+                      </form>
+                    </div>
+
+
+
                   </div>
-
-
-
+                </div>
+                <div className="modal-footer">
+                  <button type="button" className="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
+                  <button type="submit" className="btn btn-primary center-block" onClick={this.handleSaveButton}>Simpan</button>
                 </div>
               </div>
-              <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
-                <button type="submit" className="btn btn-primary center-block" onClick={this.handleSaveButton}>Simpan</button>
+            </div>
+          </div>
+
+          {/* tabel read data */}
+
+          <div class="card mb-4">
+            <div class="card-header">
+              <i class="fa fa-table me-1"></i>
+              Data Kategori Buku
+            </div>
+
+            <br />
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Cari" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button">Cari</button>
+                <button className="btn btn-success" id="btnNavbarSearch" type="button" style={{ marginInlineStart: '10px' }} data-toggle="modal" data-target="#exampleModalLong">Tambah data</button>
               </div>
+            </form>
+
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Kategori</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  {
+                    this.state.listKategori.map(kategori => {  // looping dan masukkan untuk setiap data yang ada di listBuku ke variabel Buku
+                      return (
+                        <DataKategori key={kategori.id}
+                          data={kategori}
+                          hapusDataKategori={this.handleHapusKategori} EditDataKategori={this.handleEditKategori} />     // mappingkan data json dari API sesuai dengan kategorinya
+                      )
+                    })
+                  }
+                </tbody>
+              </table>
             </div>
-          </div>
-        </div>
-
-        {/* tabel read data */}
-
-        <div class="card mb-4">
-          <div class="card-header">
-            <i class="fa fa-table me-1"></i>
-            Data Kategori Buku
-          </div>
-
-          <br />
-          <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Cari" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-              <button class="btn btn-primary" id="btnNavbarSearch" type="button">Cari</button>
-              <button className="btn btn-success" id="btnNavbarSearch" type="button" style={{ marginInlineStart: '10px' }} data-toggle="modal" data-target="#exampleModalLong">Tambah data</button>
-            </div>
-          </form>
-
-          <div class="card-body">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Kategori</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-
-                {
-                  this.state.listKategori.map(kategori => {  // looping dan masukkan untuk setiap data yang ada di listBuku ke variabel Buku
-                    return (
-                      <DataKategori key={kategori.id}
-                        data={kategori}
-                        hapusDataKategori={this.handleHapusKategori} EditDataKategori={this.handleEditKategori} />     // mappingkan data json dari API sesuai dengan kategorinya
-                    )
-                  })
-                }
-              </tbody>
-            </table>
           </div>
         </div>
       </div>

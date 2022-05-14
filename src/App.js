@@ -12,7 +12,7 @@ import Index from './container/endUser/Index';
 import Keranjang from './container/endUser/Keranjang';
 
 import MasterLayout from './layouts/admin/MasterLayout';
-import Dashboard from "./components/admin/Dashboard";
+import Dashboard from "./container/admin/Dashboard";
 import Checkout from './container/Checkout/Checkout';
 // import MasterCust from './layouts/frontend/Master';
 
