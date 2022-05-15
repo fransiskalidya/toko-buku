@@ -245,13 +245,12 @@ class Invoice extends Component {
                                         </form>
                                     </div>
 
-                                  
+
 
                                 </div>
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
-                                <button type="submit" className="btn btn-primary center-block" onClick={this.handleSaveButton}>Simpan</button>
                             </div>
                         </div>
                     </div>
