@@ -11,7 +11,7 @@ const Dashboard = () => {
                     <h1 class="mt-4">Dashboard</h1>
                     <ol class="breadcrumb mb-4">
                         <span>
-                            <li class="breadcrumb-item active">Dashboard</li>
+                            <li class="breadcrumb-item active">Welcome back, your Dashboard is ready!</li>
                             <div class="card border-secondary mb-3">
                                 <div class="card-header">{dt} - {currentTime}</div>
                             </div>
@@ -24,7 +24,7 @@ const Dashboard = () => {
                         </div>
                     </div> */}
                     <div class="row">
-                        <div class="col-xl-3">
+                        <div class="col-xl-4">
                             <div class="card border-secondary mb-3">
                                 <div class="card-header">Jumlah User</div>
                                 <div class="card-body text-secondary">
@@ -34,7 +34,7 @@ const Dashboard = () => {
                             </div>
                         </div>
 
-                        <div class="col-xl-3">
+                        <div class="col-xl-4">
                             <div class="card border-secondary mb-3">
                                 <div class="card-header">pendapatan bulan ini</div>
                                 <div class="card-body text-secondary">
@@ -43,7 +43,7 @@ const Dashboard = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3">
+                        <div class="col-xl-4">
                             <div class="card border-danger mb-3">
                                 <div class="card-header">Pesanan Tertunda</div>
                                 <div class="card-body text-secondary">
