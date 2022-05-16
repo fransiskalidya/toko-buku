@@ -175,14 +175,14 @@ class Akun extends Component {
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
                                 <div className="modal-header">
-                                    <h5 className="modal-title" id="exampleModalLongTitle">Detail Akun</h5>
+                                    <h5 className="modal-title" id="exampleModalLongTitle">Edit Profile</h5>
                                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div className="modal-body">
+                                <div className="container">
 
-                                    <div className="card">
+                                    <div className="card text-center">
                                         <img src="https://elmeniawy.com/wp-content/uploads/2021/12/people-waving-hand-illustration-concept_52683-29825.jpg" class="card-img-top" alt="bookStore"></img>
 
                                         <div className="card-body">
@@ -195,29 +195,29 @@ class Akun extends Component {
                                                 </div>
                                                 <br></br>
 
-                                                <div className="form-floating mb-3">
+                                                    <div className="form-floating mb-3">
                                                     <input className="form-control" id="nama" name="nama" placeholder="Nama" onChange={this.handleChange} value={this.state.insertAkun.nama} />
                                                     <label htmlFor="nama" form="nama">Nama</label>
                                                 </div>
+                                                
                                                 <div className="form-floating mb-3">
                                                     <input type="text" className="form-control" id="hp" name="hp" placeholder="Tota;" onChange={this.handleChange} value={this.state.insertAkun.hp} />
                                                     <label htmlFor="hp" form="hp">Hp</label>
                                                 </div>
+                                                
                                                 <div className="form-floating mb-3">
                                                     <input type="text" className="form-control" id="email" name="email" placeholder="email" onChange={this.handleChange} value={this.state.insertAkun.email} />
                                                     <label htmlFor="email" form="email">Email</label>
                                                 </div>
+                                              
                                                 <div className="form-floating mb-3">
                                                     <input type="input" className="form-control" id="alamat" name="alamat" placeholder="alamat" onChange={this.handleChange} value={this.state.insertAkun.alamat} />
                                                     <label htmlFor="alamat" form="alamat">Alamat</label>
                                                 </div>
-
+                                               
                                             </form>
                                         </div>
-
-
-
-                                    </div>
+                                    </div>                                   
                                 </div>
                                 <div className="modal-footer">
                                     <button type="button" className="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
@@ -240,11 +240,23 @@ class Akun extends Component {
 
 
                         <br />
+                        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-4 my-md-0">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Cari" aria-label="Recipient's username" aria-describedby="basic-addon4" />
+                                <button class="btn btn-warning" id="btnNavbarSearch" type="button">Cari</button>
+                                <button className="btn btn-success" id="btnNavbarSearch" type="button" style={{ marginInlineStart: '10px' }} data-toggle="modal" data-target="#exampleModalLong">Tambah data</button>
 
+                            </div>
+                        </form>
+                        
                         <div className="title">
-                            <h1>PROFILE</h1>
+                            <tr>
+                            <td>PROFILE</td>
+                            </tr>
                         </div>
-                        {
+                        
+                        
+                            {
                             this.state.listAkun.map(akun => {    // looping dan masukkan untuk setiap data yang ada di listAkunke variabel Akun
                                 return (
                                     <DataAkun key={akun.id}
@@ -254,9 +266,10 @@ class Akun extends Component {
                             })
                         }
 
+                            
                     </div >
+                    </div>
                 </div >
-            </div >
         );
     };
 }

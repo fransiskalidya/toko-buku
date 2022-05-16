@@ -1,8 +1,9 @@
 .title{
+    margin: 0;
+    padding: 600;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
     text-align: center;
 }
 
-.foto{
-    align-items: center;
-    text-align: center;
-}
+
