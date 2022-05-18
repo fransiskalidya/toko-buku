@@ -13,8 +13,8 @@ import Akun from "../container/akun/Akun";
 // import Index from "../container/endUser/Index";
 
 const routes =[
-    {path: '/admin', exact: true, name: "Admin"},
-    {path: '/', exact: true, name: "Dashboard", component: Dashboard},
+    // {path: '/admin', exact: true, name: "Admin"},
+    {path: '/admin', exact: true, name: "Dashboard", component: Dashboard},
     {path: '/admin/dashboard', exact: true, name: "Dashboard", component: Dashboard},
     {path: '/admin/kategori', exact: true, name: "Kategori", component: Kategori},
     {path: '/admin/DaftarBuku', exact: true, name: "DaftarBuku", component: DaftarBuku},

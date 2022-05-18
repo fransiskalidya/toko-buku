@@ -59,7 +59,7 @@ const Sidebar = () => {
 
 
                     <div className="sb-sidenav-menu-heading">Transaksi</div>
-                    <Link className="nav-link" to="charts.html">
+                    <Link className="nav-link" to="/admin/invoice">
                         <div className="sb-nav-link-icon"><i className="fa fa-chart-area"></i></div>
                         List Order Customers
                     </Link>
