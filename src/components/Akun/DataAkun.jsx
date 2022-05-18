@@ -8,15 +8,17 @@ class akun extends Component {
         const prmData = this.props.data;
         return (
             <tr>
-                <td><img class="rounded-image" src={prmData.gambar} alt="GambarUser" text-align="center"/></td><br></br><br></br>
-                <td>{prmData.nama}</td><br></br>
-                <td>{prmData.hp}</td><br></br>
-                <td>{prmData.email}</td><br></br>
-                <td>{prmData.alamat}</td><br></br>
-                <td>
+                
+                <h1><center><img class="rounded-image" src={prmData.gambar} alt="GambarUser" text-align="center"/></center></h1><br></br><br></br>
+                <h5><center>{prmData.nama}</center></h5><br></br>
+                <h5><center>{prmData.hp}</center></h5><br></br>
+                <h5><center>{prmData.email}</center></h5><br></br>
+                <h5><center>{prmData.alamat}</center></h5><br></br>
+                <h5>
+                    <center>
                     <button className="btn btn-sm btn-warning" onClick={() => this.props.EditDataAkun(prmData)} data-toggle="modal" data-target="#exampleModalLong">Edit Profile</button>
-
-                </td>
+                    </center>
+                </h5>
                 <td>
 
                 </td>

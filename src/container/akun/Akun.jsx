@@ -166,7 +166,7 @@ class Akun extends Component {
 
     render() {
         return (
-            <div style={{ marginTop: '90px' }}>
+            <div style={{ marginTop: '100px' }}>
                 <Navbar />
 
                 <div className="card mb-4" >
@@ -180,16 +180,17 @@ class Akun extends Component {
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div className="container">
+                                <div className="modal-body">
 
                                     <div className="card text-center">
                                         <img src="https://elmeniawy.com/wp-content/uploads/2021/12/people-waving-hand-illustration-concept_52683-29825.jpg" class="card-img-top" alt="bookStore"></img>
 
-                                        <div className="card-body">
+                                        <div className="container">
                                             {/* form pengisian */}
                                             <form>
                                                 <Alert data={this.state.Notif} />
-                                                <b><label htmlFor="gambar" form="gambar">Foto</label></b><br></br><br></br>
+                                                <b><label htmlFor="gambar" form="gambar">Foto</label>
+                                                </b><br></br><br></br>
                                                 <div className="col-md-12 mb-3">
                                                     <textarea className="form-control" id="gambar" name="gambar" placeholder="Link Gambar" onChange={this.handleChange} value={this.state.insertAkun.gambar} />
                                                 </div>
@@ -202,7 +203,7 @@ class Akun extends Component {
                                                 
                                                 <div className="form-floating mb-3">
                                                     <input type="text" className="form-control" id="hp" name="hp" placeholder="Tota;" onChange={this.handleChange} value={this.state.insertAkun.hp} />
-                                                    <label htmlFor="hp" form="hp">Hp</label>
+                                                    <label htmlFor="hp" form="hp">Nomor Handphone</label>
                                                 </div>
                                                 
                                                 <div className="form-floating mb-3">
@@ -237,25 +238,21 @@ class Akun extends Component {
                             <i class="fa fa-table me-1"></i>
                             Data Profile
                         </div>
-
-
-                        <br />
-                        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-4 my-md-0">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Cari" aria-label="Recipient's username" aria-describedby="basic-addon4" />
-                                <button class="btn btn-warning" id="btnNavbarSearch" type="button">Cari</button>
-                                <button className="btn btn-success" id="btnNavbarSearch" type="button" style={{ marginInlineStart: '10px' }} data-toggle="modal" data-target="#exampleModalLong">Tambah data</button>
-
-                            </div>
-                        </form>
                         
-                        <div className="title">
-                            <tr>
-                            <td>PROFILE</td>
-                            </tr>
+                        <br/>
+
+                        <div class="container">
+                        <div className="card">
+                        <div class="head-card">
+                        <div className="judul">
+                         
+                            <h1><center>PROFILE</center></h1>  
+
                         </div>
-                        
-                        
+                    </div>
+                </div>
+            </div>
+            
                             {
                             this.state.listAkun.map(akun => {    // looping dan masukkan untuk setiap data yang ada di listAkunke variabel Akun
                                 return (
@@ -273,5 +270,6 @@ class Akun extends Component {
         );
     };
 }
+
 
 export default Akun;
