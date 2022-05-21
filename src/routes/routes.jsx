@@ -1,5 +1,6 @@
 import DaftarBuku from '../container/Buku/DaftarBuku';
-import Kategori from '../container/admin/Kategori';
+//import Kategori from '../container/admin/Kategori';
+import Kategori from '../components/admin/kategori/Kategori';
 import RegisterAdmin from "../components/admin/RegisterAdmin";
 import DataUser from "../container/admin/DataUser";
 import Dashboard from "../container/admin/Dashboard";
@@ -9,9 +10,10 @@ import EditUser from "../container/admin/EditUser";
 import EditBuku from "../container/Buku/Editbuku";
 import Invoice from "../container/admin/Invoice";
 import Akun from "../container/akun/Akun";
-//import Checkout from '../container/Checkout/Checkout';
+import Edit from "../components/admin/kategori/Edit";
+import Detail from "../components/admin/kategori/Detail";
 // import Index from "../container/endUser/Index";
-
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 const routes =[
     // {path: '/admin', exact: true, name: "Admin"},
     {path: '/admin', exact: true, name: "Dashboard", component: Dashboard},
@@ -25,9 +27,13 @@ const routes =[
     {path: '/admin/EditUser', exact: true, name: "EditUser", component: EditUser},
     {path: '/admin/EditBuku', exact: true, name: "EditBuku", component: EditBuku},
     {path: '/admin/Invoice', exact: true, name: "Invoice", component: Invoice},
-    {path: '/Akun', exact: true, name: "Akun", component: Akun}
+    {path: '/Akun', exact: true, name: "Akun", component: Akun},
+    {path: '/admin/dashboard/edit/:id', exact: true, name: "Edit", component: Edit},
+    {path: '/admin/dashboard/show/:id', exact: true, name: "Detail", component: Detail}
     //{path: '/admin/Checkout', exact: true, name: "Checkout", component: Checkout},
     // {path: '/cust/index', exact: true, name: "Index", component: Index}
 
 ];
+
+//<Route path='/edit/:id' component={Edit} />
 export default routes;
