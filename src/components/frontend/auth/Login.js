@@ -34,7 +34,7 @@ export default class Login extends Component {
                                 <button type="button" className="btn btn-primary center-block">Login</button></div>
                             <br></br>
                             <p className="forgot-password text-right">
-                                Data belum pernah terdaftar <a href="#">Register ?</a>
+                                Data belum pernah terdaftar <a href="/register">Register ?</a>
                             </p>
                         </div>
                     </div>
