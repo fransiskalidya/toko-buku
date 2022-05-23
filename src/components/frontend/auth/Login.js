@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import './Login.css';
 import './Layout.css';
 import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
-import { register } from "../../../firebase.config";
+import { login } from "../../../firebase.config";
 
 // import {Link} from 'react-router-dom';
 import Navbar from "./Navbar";
@@ -14,7 +14,7 @@ export default function Login (props) {
     async function handleSubmit (e){
         // setLoading(true)
         try{
-        await register(emailRef.current.value,passwordRef.current.value);
+        await login(emailRef.current.value,passwordRef.current.value);
         alert("welcome to our shop")
         props.history.push('/')
         } catch(e){
@@ -33,6 +33,9 @@ export default function Login (props) {
                     <div className="title">
                         <h3><b>Login</b></h3><br></br>
                     </div>
+                    <div style={{marginLeft:"20pt", color:"red"}}>
+                            {error}
+                        </div>
                     <div className="field">
                         <label>Email ID</label><br></br><br></br>
                         <input ref={emailRef} type="email" className="form-control" placeholder="Email" />
