@@ -73,7 +73,7 @@ class Edit extends Component {
                     <br></br>
                   <div class="form-group">
                     <label for="idKategori">ID:</label>
-                    <input type="id" class="form-control" name="idKategori" value={this.state.idKategori} onChange={this.onChange} placeholder="ID" />
+                    <input disabled type="id" class="form-control" name="idKategori" value={this.state.idKategori} onChange={this.onChange} placeholder="ID" />
                   </div>
                   <br></br>
                   <div class="form-group">
