@@ -8,8 +8,8 @@ class Create extends Component {
     super();
     this.ref = firebase.firestore().collection('kategori');
     this.state = {
-      idKategori:'',
-      nama:'',
+      idKategori: '',
+      nama: '',
     };
   }
   onChange = (e) => {
@@ -28,14 +28,14 @@ class Create extends Component {
       nama,
     }).then((docRef) => {
       this.setState({
-       idKategori:'',
-       nama:'',
+        idKategori: '',
+        nama: '',
       });
       this.props.history.push("/admin/kategori")
     })
-    .catch((error) => {
-      console.error("Error adding document: ", error);
-    });
+      .catch((error) => {
+        console.error("Error adding document: ", error);
+      });
   }
 
   render() {
@@ -53,7 +53,7 @@ class Create extends Component {
             <h4><Link to="/admin/kategori" class="btn btn-primary">DAFTAR BUKU</Link></h4>
             <br></br>
             <form onSubmit={this.onSubmit}>
-            <div class="form-group">
+              <div class="form-group">
                 <label for="idKategori">ID:</label>
                 <input type="id" class="form-control" name="idKategori" value={this.state.idKategori} onChange={this.onChange} placeholder="ID" />
               </div>
