@@ -12,6 +12,7 @@ import Invoice from "../container/admin/Invoice";
 import Akun from "../container/akun/Akun";
 import Edit from "../components/admin/kategori/Edit";
 import Detail from "../components/admin/kategori/Detail";
+import Create from '../components/admin/kategori/Create';
 // import Index from "../container/endUser/Index";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 const routes =[
@@ -29,7 +30,8 @@ const routes =[
     {path: '/admin/Invoice', exact: true, name: "Invoice", component: Invoice},
     {path: '/Akun', exact: true, name: "Akun", component: Akun},
     {path: '/admin/dashboard/edit/:id', exact: true, name: "Edit", component: Edit},
-    {path: '/admin/dashboard/show/:id', exact: true, name: "Detail", component: Detail}
+    {path: '/admin/dashboard/show/:id', exact: true, name: "Detail", component: Detail},
+    {path: '/admin/dashboard/create', exact: true, name: "Create", component: Create}
     //{path: '/admin/Checkout', exact: true, name: "Checkout", component: Checkout},
     // {path: '/cust/index', exact: true, name: "Index", component: Index}
 

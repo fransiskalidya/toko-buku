@@ -59,7 +59,7 @@ class Kategori extends Component {
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Cari" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                             <button class="btn btn-primary" id="btnNavbarSearch" type="button">Cari</button>
-                            <button className="btn btn-success" id="btnNavbarSearch" type="button" style={{ marginInlineStart: '10px' }} data-toggle="modal" data-target="#exampleModalLong">Tambah data</button>
+                            <button><Link to="/admin/dashboard/create" class="btn btn-primary" id="btnNavbarSearch" type="button">Tambah Data</Link></button>
                         </div>
                     </form>
 
