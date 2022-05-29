@@ -8,8 +8,8 @@ class Create extends Component {
     super();
     this.ref = firebase.firestore().collection('kategori');
     this.state = {
-      idKategori: '',
-      nama: '',
+      idKategori:'',
+      nama:'',
     };
   }
   onChange = (e) => {
@@ -24,13 +24,12 @@ class Create extends Component {
     const { idKategori, nama } = this.state;
 
     this.ref.add({
-      idKategori: '',
-      nama: '',
-      
+      idKategori,
+      nama,
     }).then((docRef) => {
       this.setState({
-        idKategori: '',
-        nama: '',
+       idKategori:'',
+       nama:'',
       });
       this.props.history.push("/admin/kategori")
     })
@@ -42,29 +41,29 @@ class Create extends Component {
   render() {
     const { idKategori, nama } = this.state;
     return (
-        <div class="container">
+      <div class="container">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title"><b>
-              Data Kategori Buku</b>
-            </h3>
+            <h2 class="panel-title">
+              <b>Tambah Data Kategori</b>
+            </h2>
+            <br></br>
           </div>
-          <br></br>
           <div class="panel-body">
-            <h4><Link to= "/" class="btn btn-primary">Data Kategori Buku</Link></h4>
+            <h4><Link to="/admin/kategori" class="btn btn-primary">DAFTAR BUKU</Link></h4>
+            <br></br>
             <form onSubmit={this.onSubmit}>
-                <br></br>
-              <div class="form-group">
-                <label for="idKategori">idKategori:</label>
-                <input type="idKategori" class="form-control" name="idKategori" value={this.state.idKategori} onChange={this.onChange} placeholder="ID" />
+            <div class="form-group">
+                <label for="idKategori">ID:</label>
+                <input type="id" class="form-control" name="idKategori" value={this.state.idKategori} onChange={this.onChange} placeholder="ID" />
               </div>
               <br></br>
               <div class="form-group">
                 <label for="nama">Nama:</label>
-                <input type="text" class="form-control" name="nama" value={this.state.nama} onChange={this.onChange} placeholder="Nama" />
+                <input type="text" class="form-control" name="nama" value={this.state.nama} onChange={this.onChange} placeholder="Judul" />
               </div>
               <br></br>
-              <button type="simpan" class="btn btn-success">Simpan</button>
+              <button type="submit" class="btn btn-success">Submit</button>
             </form>
           </div>
         </div>

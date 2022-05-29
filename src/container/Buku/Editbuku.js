@@ -17,7 +17,7 @@ class Editbuku extends Component {
                         <div className="col-lg-5">
                             <div className="card shadow-lg border-0 rounded-lg mt-5">
                                 <div className="card-header"><h3 className="text-center font-weight-light my-4">Edit Data Buku</h3></div>
-                                <img src="https://media.istockphoto.com/vectors/business-people-deskvector-illustration-cartoon-character-vector-id824226934?k=20&m=824226934&s=170667a&w=0&h=nUMxhCxuctfHMVSK4TlL5N2azPT7M9ENxz2sRP4c6NY=" class="card-img-top" alt="bookStore"></img>
+                                <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fakupintar.id%2Funiversitas%2F-%2Fkampus%2Fdetail-kampus%2Fpoliteknik-negeri-malang-polinema%2Fprofil&psig=AOvVaw0_AgL_uObZGMjbaTQYpr5M&ust=1653534372127000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCPCS_9nV-fcCFQAAAAAdAAAAABAD" class="card-img-top" alt="bookStore"></img>
                                 <div className="card-body">
 
 
