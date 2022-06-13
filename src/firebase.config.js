@@ -21,7 +21,7 @@ firebase.firestore().settings(settings);
 const auth = getAuth();
 const app = firebase.initializeApp(config);
 export const storage = getStorage(app);
-
+// export firestore = 
 export default firebase;
 export function register(email, password){
     return createUserWithEmailAndPassword(auth, email, password);

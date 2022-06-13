@@ -1,35 +1,28 @@
 import React, { Component } from "react";
 import './Index.css';
-import IndexBuku from '../../components/frontend/IndexBuku';
+// import IndexBuku from '../../components/frontend/IndexBuku';
 import Footer from './Footer'
 import Navbar from "../../components/frontend/auth/Navbar";
+import {getDocs, updateDoc, deleteDoc} from 'firebase/firestore';
+// import {storage} from "../../firebase.config";
+import {Link} from 'react-router-dom';
+import { useState, useEffect } from "react";
+import firebase from "../../firebase.config";
 
-export default class Index extends Component {
-    state = {
-        listBuku: [],
-        insertBuku: {
-            id: 1,
-            gambar: "",
-            nama_buku: "",
-            kategori_buku: "",
-            harga: "",
-            stok: "",
-            pengarang: "",
-            penerbit: "",
-            deskripsi: ""
-        }
-    }
 
-    componentDidMount() {
-        fetch('http://localhost:3003/buku')  // alamat URL API yang ingin kita ambil datanya
-            .then(response => response.json())  // ubah response data dari URL API menjadi sebuah data json
-            .then(jsonHasilAmbilDariAPI => {    // data json hasil ambil dari API kita masukkan ke dalam listUserpada state 
-                this.setState({
-                    listBuku: jsonHasilAmbilDariAPI
-                })
-            })
-    }
-    render() {
+export default function Index() {
+    const [buku, setBuku] = useState([]);
+    const bukuCollectionRef = firebase.firestore().collection('buku');
+
+    useEffect(()=>{
+        const getBuku = async () =>{
+            const data = await getDocs(bukuCollectionRef);
+            setBuku(data.docs.map((doc)=> ({...doc.data(),id:doc.id })));
+        };
+        getBuku();
+    }, []);
+
+    
         return (
             <div>
                 <Navbar />
@@ -54,13 +47,23 @@ export default class Index extends Component {
                         <br />
                         <br />
                         <div className="row">
-
-                        {/* <div className="row row-cols-2">
-                            // <div className="col-3"> */}
                                 {
-                                    this.state.listBuku.map(buku => {    // looping dan masukkan untuk setiap data yang ada di listBuku ke variabel Buku
-
-                                        return <IndexBuku key={buku.id} gambar={buku.gambar} nama_buku={buku.nama_buku} kategori_buku={buku.kategori_buku} harga={buku.harga} stok={buku.stok} pengarang={buku.pengarang} penerbit={buku.penerbit} deskripsi={buku.deskripsi} idBuku={buku.id} />     // mappingkan data json dari API sesuai dengan kategorinya
+                                    buku.map(buku => {    // looping dan masukkan untuk setiap data yang ada di listBuku ke variabel Buku
+                                        return (
+                                            // <div className="row">
+                                                <div className="col-6 col-md-3">
+                                                    <div className="card" style={{margin: '10px',height:'540px'}}>
+                                                        <img src={buku.gambar} className="card-img-top" style={{height:'300px'}}/>
+                                                        <div className="card-body">
+                                                            <h5 className="card-title">{buku.judul}</h5>
+                                                            <p className="card-text">{buku.pengarang}</p>
+                                                            <h6 classNameName="card-title">Rp. {buku.harga}</h6>
+                                                            <Link to="#" className="btn btn-primary">keranjang</Link>
+                                                        </div>
+                                                    </div>
+                                                 </div>
+                                        )
+                                        // return <IndexBuku key={buku.id} gambar={buku.gambar} nama_buku={buku.nama_buku} kategori_buku={buku.kategori_buku} harga={buku.harga} stok={buku.stok} pengarang={buku.pengarang} penerbit={buku.penerbit} deskripsi={buku.deskripsi} idBuku={buku.id} />     // mappingkan data json dari API sesuai dengan kategorinya
                                     })
                                 }
                             {/* </div>
@@ -74,5 +77,5 @@ export default class Index extends Component {
 
         )
     }
-}
+
 

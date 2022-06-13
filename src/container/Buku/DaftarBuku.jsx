@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 // import './DaftarBuku.css';
 import DataBuku from '../../components/Buku/DataBuku';
 import Navbar from "./Navbar";
@@ -7,209 +7,18 @@ import { useState } from "react";
 import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
 import "bootstrap/dist/css/bootstrap.min.css"
 import firebase from "../../firebase.config";
+import {getDocs, updateDoc, deleteDoc} from 'firebase/firestore';
 import {storage} from "../../firebase.config";
-import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
+import { getDownloadURL, ref, uploadBytes} from "firebase/storage";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 
 export default function DaftarBuku () {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         listBuku: [],
-    //         totalData: 0,       // Untuk Hitung All Data
-    //         isUpdate: false,    // Untuk Fileter Fungsi 
-    //         Notif: {            // Untuk Tampung respon Dari Server
-    //             alertShow: false,
-    //             actionType: '',
-    //             responCode: 0,
-    //         },
-    //         insertBuku: {
-    //             id: 1,
-    //             gambar: "",
-    //             judul: "",
-    //             kategori: "",
-    //             harga: "",
-    //             stok: "",
-    //             pengarang: "",
-    //             penerbit: "",
-    //             deskripsi: ""
-    //         }
-
-    //     }
-    // }
-  
-
-
-    // ambilDataDariServerAPI = () => {
-    //     fetch('http://localhost:3003/buku')  // alamat URL API yang ingin kita ambil datanya
-    //         .then(response => response.json())  // ubah response data dari URL API menjadi sebuah data json
-    //         .then(jsonHasilAmbilDariAPI => {    // data json hasil ambil dari API kita masukkan ke dalam listUserpada state 
-    //             this.setState({
-    //                 listBuku: jsonHasilAmbilDariAPI,
-    //                 totalData: jsonHasilAmbilDariAPI.length
-    //             })
-    //         })
-    // }
-
-    // componentDidMount() {
-    //     this.ambilDataDariServerAPI()
-
-    // }
-
-    // SaveNewDataBuku = () => {        // fungsi untuk meng-handle tombol simpan
-    //     fetch('http://localhost:3003/buku', {
-    //         method: 'post',
-    //         headers: {
-    //             'Accept': 'application/json',
-    //             'Content-Type': 'application/json'
-
-    //         },
-    //         body: JSON.stringify(this.state.insertBuku)      // kirimkan ke body request untuk data yang akan ditambahkan (insert)
-    //     })
-    //         .then((Response) => {
-    //             console.log(Response)
-    //             console.log("Status Create", Response.status)
-    //             this.setState({
-    //                 Notif: {
-    //                     alertShow: true,
-    //                     actionType: 'created',
-    //                     responCode: Response.status,
-    //                 }
-    //             })
-
-    //             this.ambilDataDariServerAPI();      // reload / refresh data
-    //             this.ClearForm();
-    //             this.closeDialog();
-
-    //         });
-    // }
-
-    // EditDataBuku = () => {
-    //     const dataUpdate = this.state.insertBuku;
-    //     const id = dataUpdate.id;
-    //     fetch('http://localhost:3003/buku/' + id, {
-    //         method: 'PUT',
-    //         headers: {
-    //             'Accept': 'application/json',
-    //             'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify(dataUpdate)
-    //     })
-    //         .then((Response) => {
-    //             console.log(Response)
-    //             console.log("Status Update", Response.status)
-    //             this.setState({
-    //                 Notif: {
-    //                     alertShow: true,
-    //                     actionType: 'updated',
-    //                     responCode: Response.status,
-    //                 }
-    //             })
-
-    //             this.ambilDataDariServerAPI();      // reload / refresh data
-    //             this.ClearForm();
-    //             this.closeDialog();
-    //         });
-    // }
-
-
-
-
-    // HapusDataBuku = (data) => {
-    //     const id = data;
-
-    //     fetch('http://localhost:3003/buku/' + id, {
-    //         method: 'DELETE'
-    //     })  // alamat URL API yang ingin kita HAPUS datanya
-    //         .then(Response => {      // ketika proses hapus berhasil, maka ambil data dari server API lokal 
-    //             console.log(Response)
-    //             console.log("Status Delete", Response.status)
-
-    //             // Untuk Tampung respon Dari Server
-    //             this.setState({
-    //                 Notif: {
-    //                     alertShow: true,
-    //                     actionType: 'deleted',
-    //                     responCode: Response.status,
-    //                 }
-    //             })
-    //             this.ambilDataDariServerAPI();
-    //             this.ClearForm();
-    //         });
-    // }
-
-    // handleChange = (event) => {      // fungsi untuk meng-handle form tambah data
-    //     let timestamp = new Date().getTime();
-    //     let formInsertBuku = { ...this.state.insertBuku };
-    //     if (!this.state.isUpdate) { //Cek Jika Update Data Idnya Tidak Di Ubah
-    //         formInsertBuku['id'] = timestamp;
-    //     }
-    //     formInsertBuku[event.target.name] = event.target.value;      // menyimpan data onchange ke formInsertBukusesuai dengan target yang diisi
-    //     this.setState({
-    //         insertBuku: formInsertBuku
-    //     });
-    // }
-
-    // ClearForm = () => {
-
-    //     this.setState({
-    //         isUpdate: false,
-    //         insertBuku: {
-    //             id: 1,
-    //             gambar: "",
-    //             judul: "",
-    //             kategori: "",
-    //             harga: "",
-    //             stok: "",
-    //             pengarang: "",
-    //             penerbit: "",
-    //             deskripsi: ""
-    //         }
-    //     })
-    //     // Mengembalikan Nilai Awal Notif
-    //     setInterval(() => {
-    //         this.setState({
-    //             Notif: {
-    //                 alertShow: false,
-    //                 actionType: '',
-    //                 responCode: 0,
-    //             }
-    //         })
-    //     }, 4500);
-    // }
-
-    // handleSaveButton = () => {
-    //     if (this.state.isUpdate) {
-    //         this.EditDataBuku();
-    //     } else {
-    //         this.SaveNewDataBuku();
-    //     }
-    // }
-
-    // handleEditBuku = (data) => {
-    //     console.log('Update id', data.id);
-    //     console.log('Update arry', data);
-    //     this.setState({
-    //         insertBuku: data,
-    //         isUpdate: true
-    //     })
-    // }
-
-    // handleHapusBuku = (data) => {
-    //     console.log('Id delete =', data)
-    //     const id = data;
-
-    //     if (window.confirm('Apakah data ' + id + ' ?')) {
-    //         this.HapusDataBuku(id)
-    //     }
-    // }
-
         // close modal
-        const closeDialog = () => {
-            console.log("masuk");
-            window.location.reload();
-        }
+    const closeDialog = () => {
+        console.log("masuk");
+        window.location.reload();
+    }
     
     const [judul, setJudul] = useState('');
     const [gambar, setGambar] = useState(null);
@@ -220,7 +29,9 @@ export default function DaftarBuku () {
     const [stok, setStok] =useState(0);
     const [deskripsi, setDeskripsi] =useState('');
     const [error, setError] = useState('');
-    // editan baru
+    
+    const [buku, setBuku] = useState([]);
+    const bukuCollectionRef = firebase.firestore().collection('buku');
 
     const types = ['image/png', 'image/jpeg']
 
@@ -266,34 +77,28 @@ export default function DaftarBuku () {
                     closeDialog();
                 }).catch(err => setError(err.message))
             })
-        }, err => setError(err.message)
-            , () => {
-                // ref(storage, 'images').child(gambar.name).getDownloadURL().then(url => {
-                //     firebase.firestore().collection('buku').add({
-                //         judul: judul,
-                //         harga: Number(harga),
-                //         penerbit: penerbit,
-                //         pengarang:pengarang,
-                //         deskripsi:deskripsi,
-                //         stok :Number(stok),
-                //         kategori:kategori,
-                //         gambar: url
-                //     }).then(() => {
-                //         setJudul('');
-                //         setHarga(0);
-                //         setStok(0);
-                //         setPenerbit('');
-                //         setDeskripsi('');
-                //         setPengarang('');
-                //         setKategori('');
-                //         setGambar('');
-                //         setError('');
-                //         document.getElementById('file').value = '';
-                //     }).catch(err => setError(err.message))
-                // })
-            })
+        }, err => setError(err.message))
     }
 
+    const updateBuku = async (id) => {
+        // const bukuDoc = firebase.firestore().doc("buku", id);
+        // const newFields = { age: age + 1 };
+        // await updateDoc(bukuDoc, newFields);
+    };
+    
+    const deleteBuku = async (id) => {
+        const bukuDoc = firebase.firestore().doc("buku", id);
+        await deleteDoc(bukuDoc);
+        const data = await getDocs(bukuCollectionRef);
+    };
+
+    useEffect(()=>{
+        const getBuku = async () =>{
+            const data = await getDocs(bukuCollectionRef);
+            setBuku(data.docs.map((doc)=> ({...doc.data(),id:doc.id })));
+        };
+        getBuku();
+    }, []);
 
     // render() {
 
@@ -407,7 +212,7 @@ export default function DaftarBuku () {
 
 
 
-                        {/* <div className="card-body">
+                        <div className="card-body">
                             <table className="table">
                                 <thead>
                                     <tr>
@@ -425,14 +230,36 @@ export default function DaftarBuku () {
                                 <tbody>
 
                                     {
-                                        this.state.listBuku.map(buku => {    // looping dan masukkan untuk setiap data yang ada di listBuku ke variabel Buku
+                                        buku.map(buku => {    // looping dan masukkan untuk setiap data yang ada di listBuku ke variabel Buku
                                             // return <DataBuku key={buku.id} gambar={buku.gambar} judul={buku.judul} kategori={buku.kategori} harga={buku.harga} stok={buku.stok} pengarang={buku.pengarang} penerbit={buku.penerbit} deskripsi={buku.deskripsi} idBuku={buku.id} hapusDataBuku={this.handleHapusBuku} editDataBuku={this.handleEditBuku}/>     // mappingkan data json dari API sesuai dengan kategorinya
-                                            return <DataBuku key={buku.id} data={buku} hapusDataBuku={this.handleHapusBuku} EditDataBuku={this.handleEditBuku} />
+                                            // return <DataBuku key={buku.id} data={buku} hapusDataBuku={this.handleHapusBuku} EditDataBuku={this.handleEditBuku} />
+                                            return (
+                                                <tr>
+                                                    <td><img src={buku.gambar} alt="GambarBuku" width="150px" height="200px" /></td>
+                                                    <td>{buku.judul}</td>
+                                                    <td>{buku.kategori}</td>
+                                                    <td>{buku.harga}</td>
+                                                    <td>{buku.stok}</td>
+                                                    <td>{buku.pengarang}</td>
+                                                    <td>{buku.penerbit}</td>
+                                                    <td>{buku.deskripsi}</td>
+                                                    <td>
+                                                        <button className="btn btn-sm btn-danger" style={{ marginRight: '10px' }} onClick={() => {deleteBuku(buku.id)}}>Hapus</button>
+                                                        <button className="btn btn-sm btn-warning" onClick={() => {updateBuku(buku.id);}} data-toggle="modal" data-target="#exampleModalLong">Edit</button>
+                                    
+                                                    </td>
+                                                    <td>
+                                    
+                                                    </td>
+                                                </tr>
+                                    
+                                    
+                                            )
                                         })
                                     }
                                 </tbody>
                             </table>
-                        </div> */}
+                        </div>
                     </div>
 
                 </div>
