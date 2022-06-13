@@ -1,6 +1,7 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
+import { getStorage } from "firebase/storage";
 
 const settings = {timestampsInSnapshots: true};
 
@@ -18,6 +19,8 @@ const config = {
 firebase.initializeApp(config);
 firebase.firestore().settings(settings);
 const auth = getAuth();
+const app = firebase.initializeApp(config);
+export const storage = getStorage(app);
 
 export default firebase;
 export function register(email, password){
