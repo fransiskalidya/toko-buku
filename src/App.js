@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -16,33 +16,63 @@ import MasterLayout from './layouts/admin/MasterLayout';
 import Dashboard from "./container/admin/Dashboard";
 import Checkout from './container/Checkout/Checkout';
 import Akun from './container/akun/Akun';
+import { useHistory } from 'react-router-dom';
+import firebase from "./firebase.config";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 
+const auth = getAuth();
 // import MasterCust from './layouts/frontend/Master';
 
-function App() {
-  return (<Router>
-      
+export class App extends Component {
 
-          <Switch>
-            <Route exact path='/' component={Index} />
-            <Route path="/login" component={Login} />
-            <Route path="/registercustomer" component={Signup} />
-            <Route path="/logincustomer" component={LoginCustomer} />
-            <Route path="/keranjang" component={Keranjang} />
-            <Route path="/checkout" component={Checkout} />
-            <Route path="/akun" component={Akun} />
+  state = {
+    user: null,
+  }
+
+  componentDidMount() {
+
+    // getting user info for navigation bar
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        firebase.firestore().collection('signinUser').doc(user.uid).get().then(snapshot => {
+          this.setState({
+            user: snapshot.data().Name
+          })
+        })
+      }
+      else {
+        this.setState({
+          user: null
+        })
+      }
+    })
+
+  }
+  // function App() {
+  render() {
+    return (<Router>
 
 
-            {/* <Route path="/product" component={Content} /> */}
-            {/* <Route path="/admin/register" component={RegisterAdmin} /> */}
-            {/* <Route path="/admin/daftarBuku" component={DaftarBuku} />
+      <Switch>
+        <Route exact path='/' component={() => <Index user={this.state.user} />} />
+        <Route path="/login" component={Login} />
+        <Route path="/registercustomer" component={Signup} />
+        <Route path="/logincustomer" component={LoginCustomer} />
+        <Route path="/keranjang" component={Keranjang} />
+        <Route path="/checkout" component={Checkout} />
+        <Route path="/akun" component={Akun} />
+
+
+        {/* <Route path="/product" component={Content} /> */}
+        {/* <Route path="/admin/register" component={RegisterAdmin} /> */}
+        {/* <Route path="/admin/daftarBuku" component={DaftarBuku} />
             <Route path="/admin/kategori" component={Kategori} /> */}
-            <Route path="/admin" name="Admin" render={(props)=> <MasterLayout {...props} />} />
-            {/* <Route path="/cust" name="Cust" render={(props)=> <MasterCust {...props} />} /> */}
+        <Route path="/admin" name="Admin" render={(props) => <MasterLayout {...props} />} />
+        {/* <Route path="/cust" name="Cust" render={(props)=> <MasterCust {...props} />} /> */}
 
-          </Switch>   
-     </Router>
-  );
+      </Switch>
+    </Router>
+    );
+  }
 }
-
 export default App;

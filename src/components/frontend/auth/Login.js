@@ -31,7 +31,7 @@ export default function Login (props) {
                 <div className="col-lg-2"></div>
                 <form>
                     <div className="title">
-                        <h3><b>Login</b></h3><br></br>
+                        <h3><b>Login Akun Admin</b></h3><br></br>
                     </div>
                     <div style={{marginLeft:"20pt", color:"red"}}>
                             {error}
