@@ -57,7 +57,7 @@ export const LoginCustomer = (props) => {
                     {error && <span className='error-msg'>{error}</span>}
                     <br />
                     <span>Belum memiliki akun? Register
-                        <Link to="signup"> Disini</Link>
+                        <Link to="registercustomer"> Disini</Link>
                     </span>
                 </form>
             </div>

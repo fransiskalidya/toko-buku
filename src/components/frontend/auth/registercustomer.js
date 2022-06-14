@@ -29,7 +29,7 @@ export const Signup = (props) => {
                 setEmail('');
                 setPassword('');
                 setError('');
-                props.history.push('/login');
+                props.history.push('/logincustomer');
             }).catch(err => setError(err.message));
         }).catch(err => setError(err.message));
     }
@@ -75,7 +75,7 @@ export const Signup = (props) => {
                     {error && <span className='error-msg'>{error}</span>}
                 <br />
                 <span>Sudah memiliki akun? Login
-                    <Link to="login"> Disini</Link>
+                    <Link to="logincustomer"> Disini</Link>
                 </span>
                 </form>
             </div>
