@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// import { Auth } from 'firebase/auth';
 import { Link } from 'react-router-dom'
 import firebase from '../../../firebase.config';
 import { login } from "../../../firebase.config";
