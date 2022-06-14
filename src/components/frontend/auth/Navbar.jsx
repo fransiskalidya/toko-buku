@@ -9,10 +9,10 @@ const Navbar=()=>{
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <Link className="nav-link" to={"/login"}>Login</Link>
+                <Link className="nav-link" to={"/logincustomer"}>Login</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to={"/register"}>Register</Link>
+                <Link className="nav-link" to={"/registercustomer"}>Register</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to={"/keranjang"}>Keranjang</Link>

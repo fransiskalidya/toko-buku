@@ -10,11 +10,13 @@ import DaftarBuku from './container/Buku/DaftarBuku';
 import Kategori from './container/admin/Kategori';
 import Index from './container/endUser/Index';
 import Keranjang from './container/endUser/Keranjang';
-
+import Signup from './components/frontend/auth/registercustomer';
+import LoginCustomer from './components/frontend/auth/logincustomer';
 import MasterLayout from './layouts/admin/MasterLayout';
 import Dashboard from "./container/admin/Dashboard";
 import Checkout from './container/Checkout/Checkout';
 import Akun from './container/akun/Akun';
+
 // import MasterCust from './layouts/frontend/Master';
 
 function App() {
@@ -24,7 +26,8 @@ function App() {
           <Switch>
             <Route exact path='/' component={Index} />
             <Route path="/login" component={Login} />
-            <Route path="/register" component={Register} />
+            <Route path="/registercustomer" component={Signup} />
+            <Route path="/logincustomer" component={LoginCustomer} />
             <Route path="/keranjang" component={Keranjang} />
             <Route path="/checkout" component={Checkout} />
             <Route path="/akun" component={Akun} />

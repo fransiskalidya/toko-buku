@@ -33,7 +33,7 @@ export default function Register (props){
                     <form>
 
                         <div className="titleText">
-                            <h3><b>Register Akun User</b></h3><br></br>
+                            <h3><b>Register Akun Admin</b></h3><br></br>
                         </div>
                         <div style={{marginLeft:"20pt", color:"red"}}>
                             {error}
