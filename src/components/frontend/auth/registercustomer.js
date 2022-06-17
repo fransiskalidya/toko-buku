@@ -23,7 +23,7 @@ export const Signup = (props) => {
             firebase.firestore().collection('signinUser').doc(cred.user.uid).set({
                 Name: name,
                 Email: email,
-                Password: password
+                Password: password,
             }).then(() => {
                 setName('');
                 setEmail('');
