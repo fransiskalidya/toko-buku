@@ -6,7 +6,8 @@ import '../../frontend/auth/Register.css';
 import Navbar from "./Navbar";
 import { getDocs, updateDoc, deleteDoc, doc } from 'firebase/firestore';
 
-export const Login = (props) => {
+// export const Login = (props) => {
+export default function Login (props){
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -14,26 +15,21 @@ export const Login = (props) => {
     const [error, setError] = useState('');
     const userCollectionRef = firebase.firestore().collection('signinUser');
     const db = firebase.firestore();
-
+    
     const logincus = (e) => {
         e.preventDefault();
-        login(email, password).then((cred) => {
-            firebase.firestore().collection('signinUser').doc(cred.user.uid)
-            .then(() => {
-                setEmail('');
-                setPassword('');
-                setRole('');
-                setError('');
-                // db.collection('signinUser')
-                //     .get()
-                    // .then(snapshot => {
-                        // const data = await getDocs(userCollectionRef);
-                        if (role = "admin") {
-                            props.history.push('/admin/Dashboard');
-                        }
-                    })
-            }).catch(err => setError(err.message));
-        }
+        login(email, password).then(() => {
+            setEmail('');
+            setPassword('');
+            setError('');
+            // const userDoc = doc(db, "signinUser");
+            // console.log(userDoc.role);
+
+            // if(userDoc.role == "admin"){
+                props.history.push('/admin/dashboard');
+            // }
+        }).catch(err => setError(err.message));
+    }
 
 return (
             <div>
@@ -81,4 +77,4 @@ return (
 
     }
 
-    export default Login
+    // export default Login
