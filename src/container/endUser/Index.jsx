@@ -9,12 +9,13 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import firebase from "../../firebase.config";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { db, fs } from '../../firebase.config';
 
 import { useHistory } from 'react-router-dom'
 
 const auth = getAuth();
 
-export const Index = ({ user }) => {
+export const Index = (props ) => {
 
     const history = useHistory();
 
@@ -37,6 +38,19 @@ export const Index = ({ user }) => {
         };
         getBuku();
     }, []);
+
+
+    function addtocart(item) {
+        buku.map((i) => {
+            if (i.id == item.id) {
+                i.cart = true
+            }
+        })
+
+        db.collection('cart').doc(`${item.id}`).set(item, { merge: true })
+        history.push('/cart');
+
+    }
 
 
     return (
@@ -74,7 +88,7 @@ export const Index = ({ user }) => {
                                                 <h5 className="card-title">{buku.judul}</h5>
                                                 <p className="card-text">{buku.pengarang}</p>
                                                 <h6 classNameName="card-title">Rp. {buku.harga}</h6>
-                                                <Link to="#" className="btn btn-primary">keranjang</Link>
+                                                <button className='btn btn-primary' onClick={() => addtocart(buku)}>Keranjang</button>
                                             </div>
                                         </div>
                                     </div>

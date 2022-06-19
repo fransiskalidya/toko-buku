@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import firebase from "../../../firebase.config";
+// import firebase from "../../../firebase.config";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import logo from '../../../images/ecommerce.svg';
+// import logo from '../../../images/ecommerce.svg';
 import './navbar.css'
 // import { Icon } from 'react-icons-kit'
 // import { cart } from 'react-icons-kit/entypo/cart'
@@ -10,7 +10,7 @@ import './navbar.css'
 import { useHistory } from 'react-router-dom'
 
 
-const Navbar = ({ user }) => {
+const Navbar = () => {
 
   const auth = getAuth();
   const history = useHistory();
@@ -22,7 +22,7 @@ const Navbar = ({ user }) => {
   }
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-light fixed">
       <div className="container" style={{ border: "none" }}>
         <Link className="navbar-brand" to={"/login"}>BookTown</Link>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
