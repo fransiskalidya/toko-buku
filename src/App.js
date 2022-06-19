@@ -7,7 +7,7 @@ import Login from "./components/frontend/auth/Login";
 import Register from "./components/frontend/auth/Register";
 import RegisterAdmin from "./components/admin/RegisterAdmin";
 import DaftarBuku from './container/Buku/DaftarBuku';
-import Kategori from './container/admin/Kategori';
+//import Kategori from './container/admin/Kategori';
 import Index from './container/endUser/Index';
 import Keranjang from './container/endUser/Keranjang';
 import Signup from './components/frontend/auth/registercustomer';

@@ -22,7 +22,7 @@ const Sidebar = () => {
                         <nav className="sb-sidenav-menu-nested nav">
                             <Link className="nav-link" to="/admin/DaftarBuku">Daftar Buku</Link>
                             <Link className="nav-link" to="/admin/kategori">Kategori Buku</Link>
-                            <Link className="nav-link" to="/admin/DataUser">Data User</Link>
+                            <Link className="nav-link" to="/admin/datauser/DataUser">Data User</Link>
                         </nav>
                     </div>
                     <div className="sb-sidenav-menu-heading">Autentikasi</div>
