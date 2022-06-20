@@ -9,6 +9,7 @@ import firebase from "../../firebase.config";
 import { getDocs, updateDoc, deleteDoc, doc } from 'firebase/firestore';
 import { storage } from "../../firebase.config";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
+import { Link } from 'react-router-dom';
 
 
 export default function DaftarBuku() {
@@ -78,27 +79,6 @@ export default function DaftarBuku() {
             })
         }, err => setError(err.message))
     }
-
-    const updateBuku = async (id) => {
-        const db = firebase.firestore();
-        const bukuDoc = doc(db, "buku", id);
-        try {
-            await updateDoc(bukuDoc, {
-                judul: judul,
-                harga: Number(harga),
-                penerbit: penerbit,
-                pengarang: pengarang,
-                deskripsi: deskripsi,
-                stok: Number(stok),
-                kategori: kategori,
-                gambar: gambar
-            })
-        } catch (err) {
-            alert(err)
-        }
-        // const newFields = { age: age + 1 };
-        // await updateDoc(bukuDoc, newFields);
-    };
 
     const deleteBuku = async (id) => {
         const db = firebase.firestore();
@@ -240,7 +220,7 @@ export default function DaftarBuku() {
                                                 <td>{buku.deskripsi}</td>
                                                 <td>
                                                     <button className="btn btn-sm btn-danger" style={{ marginRight: '10px' }} onClick={() => { deleteBuku(buku.id) }}>Hapus</button>
-                                                    <button className="btn btn-sm btn-warning" onClick={() => { updateBuku(buku.id); }} data-toggle="modal" data-target="#exampleModalLong">Edit</button>
+                                                    <button className="btn btn-sm btn-warning" data-toggle="modal" data-target="#exampleModalLong"><Link to= {`/admin/EditBuku/${buku.id}`}>Edit</Link></button>
 
                                                 </td>
                                                 <td>

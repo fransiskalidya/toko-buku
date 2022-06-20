@@ -31,7 +31,7 @@ const routes =[
     {path: '/admin/auth/Login', exact: true, name: "Login", component: Login},
     {path: '/admin/auth/Register', exact: true, name: "Register", component: Register},
 //    {path: '/admin/EditUser', exact: true, name: "EditUser", component: EditUser},
-    {path: '/admin/EditBuku', exact: true, name: "EditBuku", component: EditBuku},
+    {path: '/admin/EditBuku/:id', exact: true, name: "EditBuku", component: EditBuku},
     {path: '/admin/Invoice', exact: true, name: "Invoice", component: Invoice},
     {path: '/Akun', exact: true, name: "Akun", component: Akun},
     {path: '/admin/dashboard/edit/:id', exact: true, name: "Edit", component: Edit},
