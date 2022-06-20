@@ -88,7 +88,7 @@ class DataUser extends Component {
                                             <td>{signinUser.Password}</td>
                                             <td>{signinUser.Role}</td>
                                             <td><Link to={`/admin/datauser/edit/${signinUser.key}`} class="btn btn-warning">Edit</Link>&nbsp;
-                                                <Link to={`/admin/datauser/Detail/${signinUser.key}`} class="btn btn-success">Detail</Link>&nbsp;
+                                                <Link to={`/admin/datauser/detail/${signinUser.key}`} class="btn btn-success">Detail</Link>&nbsp;
                                             </td>
 
                                         </tr>

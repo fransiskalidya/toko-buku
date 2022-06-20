@@ -76,7 +76,7 @@ class Edit extends Component {
               </div>
               <br></br>
               <div class="panel-body">
-                <h4><Link to={`/admin/datauser/DetailUser/${this.state.key}`} class="btn btn-primary">Detail Data User</Link></h4>
+                <h4><Link to={`/admin/datauser/detail/${this.state.key}`} class="btn btn-primary">Detail Data User</Link></h4>
                 <form onSubmit={this.onSubmit}>
                     <br></br>
                   <div class="form-group">

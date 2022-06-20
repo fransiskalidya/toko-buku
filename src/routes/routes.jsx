@@ -41,7 +41,7 @@ const routes =[
     // {path: '/cust/index', exact: true, name: "Index", component: Index}
     {path: '/admin/datauser/create', exact: true, name: "CreateUser", component: CreateUser},
     {path: '/admin/datauser/edit/:id', exact: true, name: "EditUser", component: EditUser},
-    {path: '/admin/datauser/Detail/:id', exact: true, name: "DetailUser", component: DetailUser},
+    {path: '/admin/datauser/detail/:id', exact: true, name: "DetailUser", component: DetailUser},
     {path: '/admin/datauser/DataUser', exact: true, name: "DataUser", component: DataUser}
 
 ];

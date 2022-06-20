@@ -7,13 +7,11 @@ class Detail extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Name: {},
-      Email: {},
-      Password: {},
-      Role: {},
+      signinUser: {},
       key: ''
     };
   }
+
 
   componentDidMount() {
     const ref = firebase.firestore().collection('signinUser').doc(this.props.match.params.id);
