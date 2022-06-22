@@ -220,7 +220,7 @@ export default function DaftarBuku() {
                                                 <td>{buku.deskripsi}</td>
                                                 <td>
                                                     <button className="btn btn-sm btn-danger" style={{ marginRight: '10px' }} onClick={() => { deleteBuku(buku.id) }}>Hapus</button>
-                                                    <button className="btn btn-sm btn-warning" data-toggle="modal" data-target="#exampleModalLong"><Link to= {`/admin/EditBuku/${buku.id}`}>Edit</Link></button>
+                                                    <Link to= {`/admin/EditBuku/${buku.id}`}><button className="btn btn-sm btn-warning" data-toggle="modal" style={{color:"white"}} data-target="#exampleModalLong">Edit</button></Link>
 
                                                 </td>
                                                 <td>

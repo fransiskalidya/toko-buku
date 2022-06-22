@@ -1,8 +1,18 @@
 import React from "react";
 // import Navbar from "./Navbar";
-import {Link} from 'react-router-dom';
+import { getAuth } from "firebase/auth";
+import { useHistory } from "react-router-dom";
 
 const Navbar = () =>{
+    const auth = getAuth();
+    const history = useHistory();
+    // handle logout
+    const handleLogout = () => {
+      auth.signOut().then(() => {
+        history.push('/login');
+      })
+    }
+
     return(
     //     <nav classNama="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     //     <Link className="navbar-brand ps-3" to="/admin">Start Bootstrap</Link>
@@ -43,7 +53,7 @@ const Navbar = () =>{
                         <li><a class="dropdown-item" href="#!">Settings</a></li>
                         <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                        <li><a class="dropdown-item" onClick={handleLogout}>Logout</a></li>
                     </ul>
                 </li>
             </ul>
