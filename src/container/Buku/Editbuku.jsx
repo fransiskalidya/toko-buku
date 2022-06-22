@@ -49,29 +49,23 @@ class Editbuku extends Component {
         state[e.target.name] = e.target.value;
         this.setState({ buku: state });
 
-
     }
     // handleBookImage = (e) => {
     //     const { gambar } = this.state;
     //     let state = this.state
-
-
-
     //     const types = ['image/png', 'image/jpeg'];
     //     let selectedFile = e.target.files[0];
     //     console.log(selectedFile);
     //     if (selectedFile && types.includes(selectedFile.type)) {
-    //         state[e.target.name.gambar] = selectedFile;
             
-    //         // const uploadTask = ref(storage, `images/${gambar.name}`);
-    //         // uploadBytes(uploadTask, gambar).then((snapshot) => {
-    //         //     alert("sukses");
+    //         const uploadTask = ref(storage, `images/${gambar.name}`);
+    //         uploadBytes(uploadTask, gambar).then(() => {
+    //             alert("sukses");
     //         //     getDownloadURL(snapshot.ref).then((url) => {
-    //         //         // this.state.gambar = url;
-
+    //         //         this.state.gambar = url;
     //         //         console.log(url);
     //         //     })
-    //         // })
+    //         })
     //     }
     // }
 
@@ -125,7 +119,8 @@ class Editbuku extends Component {
                         <form onSubmit={this.onSubmit}>
                             <div class="form-group">
                                 <label for="gambar">Gambar:</label>
-                                <input type="file" id="file" class="form-control" name="gambar" value={this.onChange} onChange={this.handleBookImage} placeholder="gambar" />
+                                {/* <input type="file" id="file" class="form-control" name="gambar" onChange={this.handleBookImage} placeholder="gambar" /> */}
+                                <input type="text" id="file" class="form-control" name="gambar" value={this.state.gambar} onChange={this.onChange} placeholder="gambar" />
                             </div>
                             <br></br>
 
