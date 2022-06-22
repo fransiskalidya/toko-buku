@@ -61,23 +61,23 @@ class Create extends Component {
             <br></br>
             <form onSubmit={this.onSubmit}>
               <div class="form-group">
-                <label for="nama">Nama:</label>
-                <input type="text" class="form-control" name="nama" value={this.state.Name} onChange={this.onChange} placeholder="Judul" />
+                <label for="Name">Nama:</label>
+                <input type="text" class="form-control" name="Name" value={this.state.Name} onChange={this.onChange} placeholder="Nama" />
               </div>
               <br></br>
               <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="text" class="form-control" name="email" value={this.state.Email} onChange={this.onChange} placeholder="Email" />
+                <label for="Email">Email:</label>
+                <input type="email" class="form-control" name="Email" value={this.state.Email} onChange={this.onChange} placeholder="Email" />
               </div>
               <br></br>
               <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="text" class="form-control" name="password" value={this.state.Password} onChange={this.onChange} placeholder="Password" />
+                <label for="Password">Password:</label>
+                <input type="password" class="form-control" name="Password" value={this.state.Password} onChange={this.onChange} placeholder="Password" />
               </div>
               <br></br>
               <div class="form-group">
-                <label for="role">Role:</label>
-                <input type="text" class="form-control" name="role" value={this.state.Role} onChange={this.onChange} placeholder="Role" />
+                <label for="Role">Role:</label>
+                <input type="text" class="form-control" name="Role" value={this.state.Role} onChange={this.onChange} placeholder="Role" />
               </div>
               <br></br>
               <button type="submit" class="btn btn-success">Submit</button>

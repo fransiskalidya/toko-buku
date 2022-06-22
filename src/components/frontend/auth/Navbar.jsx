@@ -22,7 +22,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light fixed">
+    <nav className="navbar navbar-expand-lg bg-light navbar-light fixed-top">
       <div className="container" style={{ border: "none" }}>
         <Link className="navbar-brand" to={"/login"}>BookTown</Link>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -34,7 +34,7 @@ const Navbar = () => {
               <Link className="nav-link" to={"/registercustomer"}>Register</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={"/keranjang"}>Keranjang</Link>
+              <Link className="nav-link" to={"/cart"}>Keranjang</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to={"/checkout"}>Checkout</Link>
