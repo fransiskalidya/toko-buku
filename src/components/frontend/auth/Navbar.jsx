@@ -40,9 +40,6 @@ const Navbar = () => {
               <Link className="nav-link" to={"/CheckoutCus"}>Checkout</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={"/akun"}>Akun</Link>
-            </li>
-            <li className="nav-item">
               <Link className="nav-link" to={"/login"}>Admin</Link>
             </li>
             <li>

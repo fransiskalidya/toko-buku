@@ -59,8 +59,8 @@ class DataUser extends Component {
                     <br />
                     <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Cari" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                            <button class="btn btn-primary" id="btnNavbarSearch" type="button">Cari</button>
+                            {/* <input type="text" class="form-control" placeholder="Cari" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                            <button class="btn btn-primary" id="btnNavbarSearch" type="button">Cari</button> */}
                             <button><Link to="/admin/datauser/create" class="btn btn-primary" id="btnNavbarSearch" type="button">Tambah Data</Link></button>
                         </div>
                     </form>

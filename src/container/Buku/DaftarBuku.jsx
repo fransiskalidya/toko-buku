@@ -183,8 +183,8 @@ export default function DaftarBuku() {
 
                     <form className="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                         <div className="input-group">
-                            <input type="text" className="form-control" placeholder="Cari" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                            <button className="btn btn-primary" id="btnNavbarSearch" type="button">Cari</button>
+                            {/* <input type="text" className="form-control" placeholder="Cari" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                            <button className="btn btn-primary" id="btnNavbarSearch" type="button">Cari</button> */}
                             <button className="btn btn-success" id="btnNavbarSearch" type="button" style={{ marginInlineStart: '10px' }} data-toggle="modal" data-target="#exampleModalLong">Tambah data</button>
                         </div>
                     </form>

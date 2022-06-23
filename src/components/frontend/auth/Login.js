@@ -39,7 +39,7 @@ return (
                     <form autoComplete="off" className='form-group' onSubmit={logincus}>
 
                         <div className="titleText">
-                            <h3><b>Login Akun User</b></h3><br></br>
+                            <h3><b>Login Akun Admin</b></h3><br></br>
                         </div>
                         <div style={{ marginLeft: "20pt", color: "red" }}>
                             {error}

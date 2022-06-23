@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Login from "./components/frontend/auth/Login";
 import Register from "./components/frontend/auth/Register";
-import RegisterAdmin from "./components/admin/RegisterAdmin";
 import DaftarBuku from './container/Buku/DaftarBuku';
 //import Kategori from './container/admin/Kategori';
 import Index from './container/endUser/Index';
@@ -15,7 +14,7 @@ import LoginCustomer from './components/frontend/auth/logincustomer';
 import MasterLayout from './layouts/admin/MasterLayout';
 import Dashboard from "./container/admin/Dashboard";
 import Checkout from './container/Checkout/Checkout';
-import Akun from './container/akun/Akun';
+// import Akun from './container/akun/Akun';
 import Cart from './container/Checkout/cart';
 import CheckoutCus from './container/Checkout/CheckoutCus';
 import { useHistory } from 'react-router-dom';
@@ -60,10 +59,9 @@ export class App extends Component {
         <Route path="/login" component={Login} />
         <Route path="/registercustomer" component={Signup} />
         <Route path="/logincustomer" component={LoginCustomer} />
-        <Route path="/keranjang" component={Keranjang} />
+        <Route path="/keranjang" component={() => <Keranjang user={this.state.user} />} />
         <Route path="/checkout" component={Checkout} />
-        <Route path="/akun" component={Akun} />
-        <Route path="/cart" component={Cart} />
+        <Route path="/cart" component={() => <Cart user={this.state.user} />} />
         <Route path="/CheckoutCus" component={CheckoutCus} />
 
 

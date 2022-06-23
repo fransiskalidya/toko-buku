@@ -1,11 +1,22 @@
 import { disableNetwork } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db, fs } from '../../firebase.config';
-import { getDocs, updateDoc, deleteDoc } from 'firebase/firestore';
+import { getDocs,updateDoc, deleteDoc } from 'firebase/firestore';
 import firebase from "../../firebase.config";
-import { useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom';
+import Navbar from "../../components/frontend/auth/Navbar";
+import { getAuth} from 'firebase/auth';
 
 function Cart(props) {
+    const auth = getAuth();
+    useEffect(() => {
+        // forcing user to signup
+        auth.onAuthStateChanged(user => {
+            if (!user) {
+                history.push('/logincustomer');
+            }
+        })
+    })
     useEffect(() => {
         db.collection("cart")
             .onSnapshot((querySnapshot) => {
@@ -80,8 +91,10 @@ function Cart(props) {
     }
 
     return (
-        <div className='container mt-2'>
-            <div className='row iustify-content-center'>
+        <div>
+            <Navbar/>
+        <div className='container' style={{marginTop:"100px"}}>
+            <div className='row iustify-content-center' >
 
 
             </div>
@@ -151,6 +164,8 @@ function Cart(props) {
                 </div>
             </div>
         </div >
+        </div>
+
     );
 }
 

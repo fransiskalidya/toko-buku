@@ -58,11 +58,11 @@ const Sidebar = () => {
                     </div>
 
 
-                    <div className="sb-sidenav-menu-heading">Transaksi</div>
+                    {/* <div className="sb-sidenav-menu-heading">Transaksi</div>
                     <Link className="nav-link" to="/admin/invoice">
                         <div className="sb-nav-link-icon"><i className="fa fa-chart-area"></i></div>
                         List Order Customers
-                    </Link>
+                    </Link> */}
                     {/* <Link className="nav-link" to="tables.html">
                     <div className="sb-nav-link-icon"><i className="fa fa-table"></i></div>
                     Tables

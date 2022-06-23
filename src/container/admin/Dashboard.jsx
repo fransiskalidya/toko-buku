@@ -1,9 +1,49 @@
-import React from "react";
+import React, { useEffect } from "react";
+import DataUser from "./datauser/DataUser";
+import firebase from "../../firebase.config";
+import { getDocs } from 'firebase/firestore';
+import { useState } from "react";
+import { db } from '../../firebase.config';
 
-const Dashboard = () => {
+
+function Dashboard() {
     let currentDate = new Date();
     let currentTime = currentDate.getHours() + ':' + currentDate.getMinutes();
     let dt = currentDate.toDateString();
+
+    const userCollectionRef = firebase.firestore().collection('signinUser');
+    const [user, setUser] = useState([]);
+    const [Name, setName] = useState('');
+    const [Email, setEmail] = useState('');
+    const [Password, setPassword] = useState('');
+    const [Role, setRole] = useState('');
+
+    useEffect(() => {
+        const getUser = async () => {
+            const data = await getDocs(userCollectionRef);
+            setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+            console.log(setUser);
+        };
+        getUser();
+    }, []);
+
+    // useEffect(() => {
+    //     db.collection("signinUser")
+    //         .onSnapshot((querySnapshot) => {
+    //             var p = [];
+    //             querySnapshot.forEach((doc) => {
+    //                 p.push(doc.data());
+    //                 user.map((i) => {
+    //                     if (i.id == doc.data().id) {
+    //                         i.CheckoutCus = true
+    //                     }
+    //                 })
+    //             });
+
+    //             setUser(p)
+    //         });
+
+    // }, []);
     return (
         <div>
             <main>
@@ -23,7 +63,7 @@ const Dashboard = () => {
                             <p class="card-text">welcome back, your Dashboard is ready!</p>
                         </div>
                     </div> */}
-                    <div class="row">
+                    {/* <div class="row">
                         <div class="col-xl-4">
                             <div class="card border-secondary mb-3">
                                 <div class="card-header">Jumlah User</div>
@@ -60,8 +100,8 @@ const Dashboard = () => {
                                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                 </div>
                             </div>
-                        </div> */}
-                    </div>
+                        </div> 
+                    </div> 
                     {/* <div class="row">
                         <div class="col-xl-6">
                             <div class="card mb-4">
@@ -82,6 +122,42 @@ const Dashboard = () => {
                             </div>
                         </div>
                     </div> */}
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fa fa-table me-1"></i>
+                            Data User
+                        </div>
+
+                        <br />
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Nama</th>
+                                        <th>E-mail</th>
+                                        <th>Password</th>
+                                        <th>Role</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        user.map(user=>{
+                                            return(
+                                                <tr>
+                                                    <td>{user.Name}</td>
+                                                    <td>{user.Email}</td>
+                                                    <td>{user.Password}</td>
+                                                    <td>{user.Role}</td>
+
+                                                </tr>
+                                            )
+                                        })
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </main>
 
