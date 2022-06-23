@@ -37,7 +37,7 @@ const Navbar = () => {
               <Link className="nav-link" to={"/cart"}>Keranjang</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={"/checkout"}>Checkout</Link>
+              <Link className="nav-link" to={"/CheckoutCus"}>Checkout</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to={"/akun"}>Akun</Link>

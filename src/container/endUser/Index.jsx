@@ -62,7 +62,7 @@ export const Index = (props ) => {
                     <p className="lead"><b>Berbelanja buku kini lebih mudah dengan BookTown Store</b></p>
                     <hr className="my-4" />
                     {/* <p>It uses utility classNamees for typography and spacing to space content out within the larger container.</p> */}
-                    <a className="btn btn-danger btn-lg" href="#" role="button">Shop Now</a>
+                    <a className="btn btn-danger btn-lg" href="/" role="button">Shop Now</a>
                 </div>
 
             </div>

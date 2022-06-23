@@ -17,6 +17,7 @@ import Dashboard from "./container/admin/Dashboard";
 import Checkout from './container/Checkout/Checkout';
 import Akun from './container/akun/Akun';
 import Cart from './container/Checkout/cart';
+import CheckoutCus from './container/Checkout/CheckoutCus';
 import { useHistory } from 'react-router-dom';
 import firebase from "./firebase.config";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
@@ -63,6 +64,7 @@ export class App extends Component {
         <Route path="/checkout" component={Checkout} />
         <Route path="/akun" component={Akun} />
         <Route path="/cart" component={Cart} />
+        <Route path="/CheckoutCus" component={CheckoutCus} />
 
 
         {/* <Route path="/product" component={Content} /> */}

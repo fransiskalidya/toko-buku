@@ -1,6 +1,9 @@
 import { disableNetwork } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db, fs } from '../../firebase.config';
+import { getDocs, updateDoc, deleteDoc } from 'firebase/firestore';
+import firebase from "../../firebase.config";
+import { useHistory } from 'react-router-dom'
 
 function Cart(props) {
     useEffect(() => {
@@ -23,6 +26,31 @@ function Cart(props) {
     const [cart, setCart] = useState([])
     const [buku, setBuku] = useState([]);
     const bukuCollectionRef = db.collection('buku');
+    const cartCollectionRef = firebase.firestore().collection('cart');
+    const history = useHistory();
+
+    useEffect(() => {
+        const getCart = async () => {
+            const data = await getDocs(cartCollectionRef);
+            setBuku(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+        };
+        getCart();
+    }, []);
+
+
+
+    function addtocart(item) {
+        cart.map((i) => {
+            if (i.id == item.id) {
+                i.CheckoutCus = true
+            }
+        })
+
+        db.collection('CheckoutCus').doc(`${item.id}`).set(item, { merge: true })
+        history.push('/CheckoutCus');
+
+    }
+
 
     function removetocart(item) {
 
@@ -53,7 +81,7 @@ function Cart(props) {
 
     return (
         <div className='container mt-2'>
-            <div className='row justify-content-center'>
+            <div className='row iustify-content-center'>
 
 
             </div>
@@ -104,6 +132,11 @@ function Cart(props) {
                                     <td>
                                         <button onClick={() => removetocart(i)} className="btn btn-danger">
                                             Remove
+                                        </button>
+                                    </td >
+                                    <td>
+                                        <button onClick={() => addtocart(i)} className="btn btn-danger">
+                                            Checkout
                                         </button>
                                     </td >
                                 </tr >
