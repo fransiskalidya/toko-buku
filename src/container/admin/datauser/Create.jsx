@@ -57,7 +57,7 @@ class Create extends Component {
             <br></br>
           </div>
           <div class="panel-body">
-            <h4><Link to="/admin/datauser/create" class="btn btn-primary">DATA USER</Link></h4>
+            <h4><Link to="/admin/datauser/DataUser" class="btn btn-primary">Data User</Link></h4>
             <br></br>
             <form onSubmit={this.onSubmit}>
               <div class="form-group">
