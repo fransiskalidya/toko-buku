@@ -59,7 +59,8 @@ export const Index = (props ) => {
             <div className="jumbotron">
                 <div className="container" id="jb">
                     <h1 className="display-4"><b>Welcome to <br />BookTown Store</b></h1>
-                    <p className="lead"><b>Berbelanja buku kini lebih mudah dengan BookTown Store</b></p>
+                    <p className="lead"><b>Berbelanja buku kini lebih mudah,
+                        karena "BookTown Store" segera hadir</b></p>
                     <hr className="my-4" />
                     {/* <p>It uses utility classNamees for typography and spacing to space content out within the larger container.</p> */}
                     <a className="btn btn-danger btn-lg" href="/" role="button">Shop Now</a>
